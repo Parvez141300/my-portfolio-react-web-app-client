@@ -3,6 +3,7 @@ import { Outlet } from "react-router";
 import NavBar from "../components/NavBar/NavBar";
 import Footer from "../components/Footer/Footer";
 import Banner from "../pages/Home/Banner/Banner";
+import About from "../pages/Home/About/About";
 
 const RootLayout = () => {
   return (
@@ -14,7 +15,7 @@ const RootLayout = () => {
       {/* nav bar end */}
 
       {/* main for route change */}
-      <main className="min-h-screen pt-24">
+      <main className="min-h-screen pt-24 space-y-12">
         {/* banner section */}
         <section>
           <Banner></Banner>
@@ -22,7 +23,7 @@ const RootLayout = () => {
 
         {/* about section */}
         <section>
-            
+            <About></About>
         </section>
 
         {/* on route change */}
