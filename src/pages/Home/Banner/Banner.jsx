@@ -1,12 +1,10 @@
 import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
 import { Typewriter } from "react-simple-typewriter";
-import SecondaryButton from "../../../components/Buttons/SecondaryButton";
 import bannerRingImage from "../../../assets/banner-images/banner html, css, js, mongodb, express, react, node logo design.png";
 import bannerFormalImage from "../../../assets/banner-images/banner coat formal dress.png";
 import { motion, scale } from "motion/react";
 import { IoMdDownload } from "react-icons/io";
+import SocialMediaIcons from "../../../components/SocialMediaIcons/SocialMediaIcons";
 
 const Banner = () => {
   return (
@@ -52,20 +50,7 @@ const Banner = () => {
           Download CV
         </motion.button>
 
-        <div className="space-y-3">
-          <h3 className="text-xl font-bold">Follow Me</h3>
-          <div className="flex gap-2 items-center">
-            <SecondaryButton className="rounded-full py-7">
-              <FaLinkedin size={25} color="white" />
-            </SecondaryButton>
-            <SecondaryButton className="rounded-full py-7">
-              <FaGithub size={25} color="white" />
-            </SecondaryButton>
-            <SecondaryButton className="rounded-full py-7">
-              <FaSquareXTwitter size={25} color="white" />
-            </SecondaryButton>
-          </div>
-        </div>
+        <SocialMediaIcons></SocialMediaIcons>
       </div>
       {/* banner image content */}
       <div className="relative flex-1">

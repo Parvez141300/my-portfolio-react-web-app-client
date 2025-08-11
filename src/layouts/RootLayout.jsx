@@ -4,6 +4,7 @@ import NavBar from "../components/NavBar/NavBar";
 import Footer from "../components/Footer/Footer";
 import Banner from "../pages/Home/Banner/Banner";
 import About from "../pages/Home/About/About";
+import Contact from "../pages/Home/Contact/Contact";
 
 const RootLayout = () => {
   return (
@@ -24,6 +25,11 @@ const RootLayout = () => {
         {/* about section */}
         <section>
             <About></About>
+        </section>
+
+        {/* contact section */}
+        <section>
+          <Contact></Contact>
         </section>
 
         {/* on route change */}
