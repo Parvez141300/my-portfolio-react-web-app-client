@@ -1,15 +1,21 @@
 import React from "react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
 import { Typewriter } from "react-simple-typewriter";
+import PrimaryButtonOutline from "../Buttons/PrimaryButtonOutline";
+import SecondaryButton from "../Buttons/SecondaryButton";
+import bannerRingImage from "../../assets/banner-images/banner html, css, js, mongodb, express, react, node logo design.png";
+import bannerFormalImage from "../../assets/banner-images/banner coat formal dress.png";
 
 const Banner = () => {
   return (
-    <div className="w-10/12 mx-auto">
+    <div className="w-10/12 mx-auto flex flex-col gap-10 md:gap-0 lg:flex-row lg:justify-center lg:items-center">
       {/* banner text content */}
-      <div className="space-y-5">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">
+      <div className="space-y-3 md:space-y-5 flex-1">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">
           Hi, I’m
           <br />
-          <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          <span className="bg-gradient-to-l from-primary to-secondary bg-clip-text text-transparent">
             Parvez Hossain Alif
           </span>
           <br />
@@ -30,7 +36,29 @@ const Banner = () => {
           Passionate about creating responsive and user friendly web application
           <br />I also make the code clean and easy to understand
         </p>
-        <button className="btn btn-outline btn-primary">Download CV</button>
+        <PrimaryButtonOutline className="rounded-lg">
+          Download CV
+        </PrimaryButtonOutline>
+
+        <div className="space-y-3">
+          <h3 className="text-xl font-bold">Follow Me</h3>
+          <div className="flex gap-2 items-center">
+            <SecondaryButton className="rounded-full py-7">
+              <FaLinkedin size={25} color="white" />
+            </SecondaryButton>
+            <SecondaryButton className="rounded-full py-7">
+              <FaGithub size={25} color="white" />
+            </SecondaryButton>
+            <SecondaryButton className="rounded-full py-7">
+              <FaSquareXTwitter size={25} color="white" />
+            </SecondaryButton>
+          </div>
+        </div>
+      </div>
+      {/* banner image content */}
+      <div className="relative flex-1">
+        <img className="w-5/6 absolute -z-10 transform translate-x-12" src={bannerRingImage} alt={bannerRingImage} />
+        <img className="w-5/6 flex m-auto" src={bannerFormalImage} alt={bannerFormalImage} />
       </div>
     </div>
   );
