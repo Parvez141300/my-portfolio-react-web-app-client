@@ -1,13 +1,23 @@
 import React from "react";
-import { FaBusinessTime } from "react-icons/fa";
+import { FaArrowCircleUp, FaBusinessTime } from "react-icons/fa";
 import { HiOutlineDevicePhoneMobile } from "react-icons/hi2";
-import { IoIosSend } from "react-icons/io";
+import logo from "../../assets/logo/PHA Logo Design.png";
+import SocialMediaIcons from "../SocialMediaIcons/SocialMediaIcons";
 
 const Footer = () => {
   return (
     <footer>
       {/* Main Footer Section */}
-      <section className="relative z-20 max-w-10/12 mx-auto bg-primary rounded-3xl p-8 space-y-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <section className="relative z-20 max-w-10/12 mx-auto bg-primary rounded-3xl p-8 space-y-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+        {/* logo, description and social media icons */}
+        <div className="space-y-4">
+          <img className="w-12" src={logo} alt={logo} />
+          <p>
+            Passionate full-stack developer creating innovative web solutions.
+            Specialized in modern technologies and responsive design.
+          </p>
+          <SocialMediaIcons></SocialMediaIcons>
+        </div>
         {/* Quick Links */}
         <div className="space-y-4">
           <p className="font-bold">Quick Links</p>
@@ -85,9 +95,14 @@ const Footer = () => {
       {/* Footer Bottom Section */}
       <section className="bg-secondary z-10 -mt-64 pt-72 pb-7 mx-auto">
         <div className="z-20 w-11/12 md:w-10/12 mx-auto">
-          <p className="text-center text-white">
-            © Copyright Law will be applied if this site is copied.
-          </p>
+          <div className="flex justify-between items-center">
+            <p className="text-center text-white">
+              © 2025 Developed by Parvez Hossain Alif
+            </p>
+            <button className="btn btn-primary rounded-lg">
+              <FaArrowCircleUp size={20} />
+            </button>
+          </div>
         </div>
       </section>
     </footer>
