@@ -45,7 +45,7 @@ const Contact = () => {
                 <MdMarkEmailRead />
                 Email:
               </strong>
-              parvezhossain744471@gmail.com
+              parvez.alif.dev@gmail.com
             </li>
           </ul>
 
