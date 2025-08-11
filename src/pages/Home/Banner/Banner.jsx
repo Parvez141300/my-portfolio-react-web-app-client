@@ -2,11 +2,11 @@ import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { Typewriter } from "react-simple-typewriter";
-import PrimaryButtonOutline from "../../../components/Buttons/PrimaryButtonOutline";
 import SecondaryButton from "../../../components/Buttons/SecondaryButton";
 import bannerRingImage from "../../../assets/banner-images/banner html, css, js, mongodb, express, react, node logo design.png";
 import bannerFormalImage from "../../../assets/banner-images/banner coat formal dress.png";
-import { motion } from "motion/react"
+import { motion, scale } from "motion/react";
+import { IoMdDownload } from "react-icons/io";
 
 const Banner = () => {
   return (
@@ -37,9 +37,20 @@ const Banner = () => {
           Passionate about creating responsive and user friendly web application
           <br />I also make the code clean and easy to understand
         </p>
-        <PrimaryButtonOutline className="rounded-lg">
+        <motion.button
+          animate={{
+            scale: [1, 1.1, 1],
+          }}
+          transition={{
+            duration: 0.8,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+          className="btn btn-outline btn-secondary rounded-lg"
+        >
+          <IoMdDownload size={25} />
           Download CV
-        </PrimaryButtonOutline>
+        </motion.button>
 
         <div className="space-y-3">
           <h3 className="text-xl font-bold">Follow Me</h3>
@@ -58,12 +69,20 @@ const Banner = () => {
       </div>
       {/* banner image content */}
       <div className="relative flex-1">
-        <motion.img animate={{
+        <motion.img
+          animate={{
             rotate: 360,
-            transition: {duration: 10, ease: "linear", repeat: Infinity},
-            
-            }} className="w-4/6 md:w-5/6 absolute -z-10 transform translate-x-16 md:translate-x-12" src={bannerRingImage} alt={bannerRingImage} />
-        <img className="w-5/6 flex m-auto" src={bannerFormalImage} alt={bannerFormalImage} />
+            transition: { duration: 10, ease: "linear", repeat: Infinity },
+          }}
+          className="w-4/6 md:w-5/6 absolute -z-10 transform translate-x-16 md:translate-x-12"
+          src={bannerRingImage}
+          alt={bannerRingImage}
+        />
+        <img
+          className="w-5/6 flex m-auto"
+          src={bannerFormalImage}
+          alt={bannerFormalImage}
+        />
       </div>
     </div>
   );
