@@ -1,11 +1,97 @@
-import React from 'react';
+import React from "react";
+import { FaBusinessTime } from "react-icons/fa";
+import { HiOutlineDevicePhoneMobile } from "react-icons/hi2";
+import { IoIosSend } from "react-icons/io";
 
 const Footer = () => {
-    return (
-        <div className='w-10/12 mx-auto'>
-            footer
+  return (
+    <footer>
+      {/* Main Footer Section */}
+      <section className="relative z-20 max-w-10/12 mx-auto bg-primary rounded-3xl p-8 space-y-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        {/* Quick Links */}
+        <div className="space-y-4">
+          <p className="font-bold">Quick Links</p>
+          <div>
+            <p>
+              <a href="#header">Home</a>
+            </p>
+            <p>
+              <a href="#resume-block">Resume</a>
+            </p>
+            <p>
+              <a href="#education-block">Education</a>
+            </p>
+            <p>
+              <a href="#features-block">Features</a>
+            </p>
+            <p>
+              <a href="#experience-block">Experience</a>
+            </p>
+            <p>
+              <a href="#portfolio">Portfolio</a>
+            </p>
+            <p>
+              <a href="#pricing">Pricing</a>
+            </p>
+            <p>
+              <a href="#contact">Contact</a>
+            </p>
+          </div>
         </div>
-    );
+
+        {/* Location */}
+        <div className="space-y-4">
+          <p className="font-bold">Location</p>
+          <div className="">
+            <iframe
+              className="w-1/2"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7294.337413850228!2d90.4003733!3d23.91907935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c4efb52c6e19%3A0x62c5fd45a44c2f6!2sErshadnagar%2C%20Tongi!5e0!3m2!1sen!2sbd!4v1741415259946!5m2!1sen!2sbd"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Google Maps Location"
+            ></iframe>
+          </div>
+          <div className="space-y-2">
+            <p className="font-bold">Address</p>
+            <p>
+              <i className="fa-solid fa-location-dot"></i> Ershad Nagar, Tongi,
+              Gazipur
+            </p>
+          </div>
+        </div>
+
+        {/* Contact */}
+        <div className="space-y-4">
+          <p className="font-bold">Contact Info</p>
+          <div className="space-y-4">
+            <p className="flex items-center gap-1">
+              <HiOutlineDevicePhoneMobile size={20} />
+              +880 1743063201
+            </p>
+            <p className="flex items-center gap-1">
+              <HiOutlineDevicePhoneMobile size={20} />
+              +880 1872243808
+            </p>
+            <p className="flex items-center gap-1">
+              <FaBusinessTime size={20} />
+              Available for work
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer Bottom Section */}
+      <section className="bg-secondary z-10 -mt-64 pt-72 pb-7 mx-auto">
+        <div className="z-20 w-11/12 md:w-10/12 mx-auto">
+          <p className="text-center text-white">
+            © Copyright Law will be applied if this site is copied.
+          </p>
+        </div>
+      </section>
+    </footer>
+  );
 };
 
 export default Footer;
