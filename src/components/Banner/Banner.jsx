@@ -6,6 +6,7 @@ import PrimaryButtonOutline from "../Buttons/PrimaryButtonOutline";
 import SecondaryButton from "../Buttons/SecondaryButton";
 import bannerRingImage from "../../assets/banner-images/banner html, css, js, mongodb, express, react, node logo design.png";
 import bannerFormalImage from "../../assets/banner-images/banner coat formal dress.png";
+import { motion } from "motion/react"
 
 const Banner = () => {
   return (
@@ -57,7 +58,11 @@ const Banner = () => {
       </div>
       {/* banner image content */}
       <div className="relative flex-1">
-        <img className="w-5/6 absolute -z-10 transform translate-x-12" src={bannerRingImage} alt={bannerRingImage} />
+        <motion.img animate={{
+            rotate: 360,
+            transition: {duration: 10, ease: "linear", repeat: Infinity},
+            
+            }} className="w-4/6 md:w-5/6 absolute -z-10 transform translate-x-16 md:translate-x-12" src={bannerRingImage} alt={bannerRingImage} />
         <img className="w-5/6 flex m-auto" src={bannerFormalImage} alt={bannerFormalImage} />
       </div>
     </div>
