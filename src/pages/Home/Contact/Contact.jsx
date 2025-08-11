@@ -1,6 +1,5 @@
 import React from "react";
 import contactImage from "../../../assets/contact-image/contact.png";
-import SocialMediaIcons from "../../../components/SocialMediaIcons/SocialMediaIcons";
 import { RiContactsBook3Fill } from "react-icons/ri";
 import { FaPhoneVolume } from "react-icons/fa";
 import { MdMarkEmailRead } from "react-icons/md";
@@ -48,9 +47,6 @@ const Contact = () => {
               parvez.alif.dev@gmail.com
             </li>
           </ul>
-
-          {/* Social Media Icons */}
-          <SocialMediaIcons></SocialMediaIcons>
         </div>
 
         {/* Contact Form */}
