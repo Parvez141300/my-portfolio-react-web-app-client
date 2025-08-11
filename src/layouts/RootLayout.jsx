@@ -2,7 +2,7 @@ import React from "react";
 import { Outlet } from "react-router";
 import NavBar from "../components/NavBar/NavBar";
 import Footer from "../components/Footer/Footer";
-import Banner from "../components/Banner/Banner";
+import Banner from "../pages/Home/Banner/Banner";
 
 const RootLayout = () => {
   return (
@@ -19,6 +19,12 @@ const RootLayout = () => {
         <section>
           <Banner></Banner>
         </section>
+
+        {/* about section */}
+        <section>
+            
+        </section>
+
         {/* on route change */}
         <div>
           <Outlet></Outlet>

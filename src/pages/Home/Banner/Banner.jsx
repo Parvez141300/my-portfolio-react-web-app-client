@@ -2,10 +2,10 @@ import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { Typewriter } from "react-simple-typewriter";
-import PrimaryButtonOutline from "../Buttons/PrimaryButtonOutline";
-import SecondaryButton from "../Buttons/SecondaryButton";
-import bannerRingImage from "../../assets/banner-images/banner html, css, js, mongodb, express, react, node logo design.png";
-import bannerFormalImage from "../../assets/banner-images/banner coat formal dress.png";
+import PrimaryButtonOutline from "../../../components/Buttons/PrimaryButtonOutline";
+import SecondaryButton from "../../../components/Buttons/SecondaryButton";
+import bannerRingImage from "../../../assets/banner-images/banner html, css, js, mongodb, express, react, node logo design.png";
+import bannerFormalImage from "../../../assets/banner-images/banner coat formal dress.png";
 import { motion } from "motion/react"
 
 const Banner = () => {
