@@ -8,7 +8,7 @@ import { BiSolidCameraMovie } from "react-icons/bi";
 
 const About = () => {
   return (
-    <div className="w-10/12 mx-auto space-y-5">
+    <div className="max-w-10/12 mx-auto space-y-5">
       <div className="flex justify-center items-center gap-2">
         <span className="text-secondary">
           <RiContactsFill size={30} />
@@ -20,7 +20,7 @@ const About = () => {
       <div className="flex flex-col md:flex-row justify-between items-center gap-8">
         <div className="w-full bg-gradient-to-t from-primary to-secondary rounded-2xl rotate-2 hover:rotate-0 transition-all duration-500 border-r-12 border-b-12 hover:border-0 border-primary">
           <img
-            className="object-fill rounded-b-2xl"
+            className="w-full rounded-b-2xl"
             src={formalPhoto}
             alt={formalPhoto}
           />
