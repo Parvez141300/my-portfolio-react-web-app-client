@@ -372,7 +372,7 @@ const Skills = () => {
                 <div className="flex justify-between items-center">
                   <div className="flex items-center gap-2">
                     <FaFigma size={20} />
-                    Firebase
+                    Figma
                   </div>
                   <p>
                     <CountUp
@@ -400,7 +400,7 @@ const Skills = () => {
                 <div className="flex justify-between items-center">
                   <div className="flex items-center gap-2">
                     <SiPixlr size={20} />
-                    Firebase
+                    Pixso
                   </div>
                   <p>
                     <CountUp
