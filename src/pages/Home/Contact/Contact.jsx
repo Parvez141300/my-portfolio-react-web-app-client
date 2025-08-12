@@ -3,10 +3,14 @@ import contactImage from "../../../assets/contact-image/contact.png";
 import { RiContactsBook3Fill } from "react-icons/ri";
 import { FaPhoneVolume } from "react-icons/fa";
 import { MdMarkEmailRead } from "react-icons/md";
+import { Slide } from "react-awesome-reveal";
 
 const Contact = () => {
   return (
-    <section id="contact" className="max-w-10/12 mx-auto space-y-8 md:space-y-12 min-h-[100vh-73px]">
+    <section
+      id="contact"
+      className="max-w-10/12 mx-auto space-y-8 md:space-y-12 min-h-[100vh-73px]"
+    >
       <div className="flex justify-center items-center gap-2">
         <span className="text-secondary">
           <RiContactsBook3Fill size={30} />
@@ -17,37 +21,39 @@ const Contact = () => {
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Contact Card */}
-        <div className="bg-gradient-to-t from-primary to-secondary border border-[#99999999] rounded-3xl p-5 space-y-3">
-          <div>
-            <img
-              className="rounded-2xl w-full"
-              src={contactImage}
-              alt={contactImage}
-            />
+        <Slide direction="left" duration={1500} triggerOnce>
+          <div className="bg-gradient-to-t from-primary to-secondary border border-[#99999999] rounded-3xl p-5 space-y-3">
+            <div>
+              <img
+                className="rounded-2xl w-full"
+                src={contactImage}
+                alt={contactImage}
+              />
+            </div>
+            <h3 className="text-xl font-bold">Parvez Hossain Alif</h3>
+            <p>Frontend Developer</p>
+            <p>
+              I am available for freelance work. Connect with me via email or
+              call or fill up the form.
+            </p>
+            <ul>
+              <li>
+                <strong className="flex items-center gap-2">
+                  <FaPhoneVolume />
+                  Phone:
+                </strong>
+                +880 1743063201
+              </li>
+              <li>
+                <strong className="flex items-center gap-2">
+                  <MdMarkEmailRead />
+                  Email:
+                </strong>
+                parvez.alif.dev@gmail.com
+              </li>
+            </ul>
           </div>
-          <h3 className="text-xl font-bold">Parvez Hossain Alif</h3>
-          <p>Frontend Developer</p>
-          <p>
-            I am available for freelance work. Connect with me via email or call
-            or fill up the form.
-          </p>
-          <ul>
-            <li>
-              <strong className="flex items-center gap-2">
-                <FaPhoneVolume />
-                Phone:
-              </strong>
-              +880 1743063201
-            </li>
-            <li>
-              <strong className="flex items-center gap-2">
-                <MdMarkEmailRead />
-                Email:
-              </strong>
-              parvez.alif.dev@gmail.com
-            </li>
-          </ul>
-        </div>
+        </Slide>
 
         {/* Contact Form */}
         <form className="bg-gradient-to-tr from-primary to-secondary rounded-3xl p-5 flex flex-col justify-center lg:col-span-2 space-y-5">

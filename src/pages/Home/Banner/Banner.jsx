@@ -5,74 +5,83 @@ import bannerFormalImage from "../../../assets/banner-images/banner coat formal 
 import { motion, scale } from "motion/react";
 import { IoMdDownload } from "react-icons/io";
 import SocialMediaIcons from "../../../components/SocialMediaIcons/SocialMediaIcons";
+import { Fade } from "react-awesome-reveal";
 
 const Banner = () => {
   return (
-    <div id="banner" className="w-10/12 mx-auto flex flex-col gap-10 md:gap-0 lg:flex-row lg:justify-center lg:items-center min-h-[calc(100vh-73px)]">
-      {/* banner text content */}
-      <div className="space-y-3 md:space-y-5 flex-1">
-        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">
-          Hi, I’m
-          <br />
-          <span className="bg-gradient-to-l from-primary to-secondary bg-clip-text text-transparent">
-            Parvez Hossain Alif
-          </span>
-          <br />
-          <Typewriter
-            words={[
-              "a Professional Developer",
-              "a Frontend Developer",
-              "a Web App Builder",
-              "a React Developer",
-              "a Mern Stack Developer"
-            ]}
-            cursor={true}
-            loop={true}
-          ></Typewriter>
-        </h1>
-        <p>
-          I am a Frontend Developer with the expertise of MERN Stack technology.{" "}
-          <br />
-          Passionate about creating responsive and user friendly web application
-          <br />I also make the code clean and easy to understand
-        </p>
-        <motion.a
-          animate={{
-            scale: [1, 1.1, 1],
-          }}
-          transition={{
-            duration: 0.8,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-          className="btn btn-outline btn-secondary rounded-lg"
-          href="https://parvez-hossain-alif.netlify.app/assets/cv/parvez%20cv.pdf"
-          target="_blank"
-        >
-          <IoMdDownload size={25} />
-          Download CV
-        </motion.a>
+    <Fade duration={1500}>
+      <div
+        id="banner"
+        className="w-10/12 mx-auto flex flex-col gap-10 md:gap-0 lg:flex-row lg:justify-center lg:items-center min-h-[calc(100vh-73px)]"
+      >
+        {/* banner left text content */}
+        <Fade delay={100} cascade damping={0.5}>
+          <div className="space-y-3 md:space-y-5 flex-1">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">
+              Hi, I’m
+              <br />
+              <span className="bg-gradient-to-l from-primary to-secondary bg-clip-text text-transparent">
+                Parvez Hossain Alif
+              </span>
+              <br />
+              <Typewriter
+                words={[
+                  "a Professional Developer",
+                  "a Frontend Developer",
+                  "a Web App Builder",
+                  "a React Developer",
+                  "a Mern Stack Developer",
+                ]}
+                cursor={true}
+                loop={true}
+              ></Typewriter>
+            </h1>
+            <p>
+              I am a Frontend Developer with the expertise of MERN Stack
+              technology. <br />
+              Passionate about creating responsive and user friendly web
+              application
+              <br />I also make the code clean and easy to understand
+            </p>
+            <motion.a
+              animate={{
+                scale: [1, 1.1, 1],
+              }}
+              transition={{
+                duration: 0.8,
+                repeat: Infinity,
+                ease: "linear",
+              }}
+              className="btn btn-outline btn-secondary rounded-lg"
+              href="https://parvez-hossain-alif.netlify.app/assets/cv/parvez%20cv.pdf"
+              target="_blank"
+            >
+              <IoMdDownload size={25} />
+              Download CV
+            </motion.a>
 
-        <SocialMediaIcons></SocialMediaIcons>
+            <SocialMediaIcons></SocialMediaIcons>
+          </div>
+        </Fade>
+        {/* banner right image content */}
+        <div className="relative flex-1">
+          <motion.img
+            animate={{
+              rotate: 360,
+              transition: { duration: 10, ease: "linear", repeat: Infinity },
+            }}
+            className="w-4/6 md:w-5/6 absolute -z-10 transform translate-x-16 md:translate-x-12"
+            src={bannerRingImage}
+            alt={bannerRingImage}
+          />
+          <img
+            className="w-5/6 flex m-auto"
+            src={bannerFormalImage}
+            alt={bannerFormalImage}
+          />
+        </div>
       </div>
-      {/* banner image content */}
-      <div className="relative flex-1">
-        <motion.img
-          animate={{
-            rotate: 360,
-            transition: { duration: 10, ease: "linear", repeat: Infinity },
-          }}
-          className="w-4/6 md:w-5/6 absolute -z-10 transform translate-x-16 md:translate-x-12"
-          src={bannerRingImage}
-          alt={bannerRingImage}
-        />
-        <img
-          className="w-5/6 flex m-auto"
-          src={bannerFormalImage}
-          alt={bannerFormalImage}
-        />
-      </div>
-    </div>
+    </Fade>
   );
 };
 

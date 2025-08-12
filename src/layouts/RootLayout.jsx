@@ -8,13 +8,16 @@ import Contact from "../pages/Home/Contact/Contact";
 import Skills from "../pages/Home/Skills/Skills";
 import Educations from "../pages/Home/Educations/Educations";
 import Projects from "../pages/Home/Porjects/Projects";
+import { Slide } from "react-awesome-reveal";
 
 const RootLayout = () => {
   return (
     <div>
       {/* nav bar start */}
       <nav className="fixed w-full z-50 backdrop-blur-lg bg-primary/50 py-3">
-        <NavBar></NavBar>
+        <Slide direction="down" duration={1500}>
+          <NavBar></NavBar>
+        </Slide>
       </nav>
       {/* nav bar end */}
 

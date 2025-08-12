@@ -5,10 +5,14 @@ import { IoBookSharp, IoGameController } from "react-icons/io5";
 import { FaMusic } from "react-icons/fa";
 import { FaEarthAmericas } from "react-icons/fa6";
 import { BiSolidCameraMovie } from "react-icons/bi";
+import { Fade, Zoom } from "react-awesome-reveal";
 
 const About = () => {
   return (
-    <div id="about" className="max-w-10/12 mx-auto space-y-8 md:space-y-12 min-h-[100vh-73px]">
+    <div
+      id="about"
+      className="max-w-10/12 mx-auto space-y-8 md:space-y-12 min-h-[100vh-73px]"
+    >
       <div className="flex justify-center items-center gap-2">
         <span className="text-secondary">
           <RiContactsFill size={30} />
@@ -18,13 +22,15 @@ const About = () => {
         </h2>
       </div>
       <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-        <div className="w-full bg-gradient-to-t from-primary to-secondary rounded-2xl rotate-2 hover:rotate-0 transition-all duration-500 border-r-12 border-b-12 hover:border-0 border-primary">
-          <img
-            className="w-full rounded-b-2xl"
-            src={formalPhoto}
-            alt={formalPhoto}
-          />
-        </div>
+        <Zoom>
+          <div className="w-full bg-gradient-to-t from-primary to-secondary rounded-2xl rotate-2 hover:rotate-0 transition-all duration-500 border-r-12 border-b-12 hover:border-0 border-primary">
+            <img
+              className="w-full rounded-b-2xl"
+              src={formalPhoto}
+              alt={formalPhoto}
+            />
+          </div>
+        </Zoom>
         <div className="space-y-5">
           <p>
             Hello! I'm Parvez Hossain Alif a passionate{" "}
@@ -36,39 +42,42 @@ const About = () => {
           </p>
           <div>
             <p>When I'm not coding, you'll find me:</p>
-            <ul>
-              <li>
-                <strong className="flex items-center gap-2">
-                  <IoBookSharp /> Reading
-                </strong>{" "}
-                – Reading anime manga
-              </li>
-              <li>
-                <strong className="flex items-center gap-2">
-                  <IoGameController /> Gaming
-                </strong>{" "}
-                – Playing Cricket, Free Fire, GTA-5, Racing, etc.
-              </li>
-              <li>
-                <strong className="flex items-center gap-2">
-                  <FaMusic /> Music
-                </strong>{" "}
-                – Listening to bangla, english songs.
-              </li>
-              <li>
-                <strong className="flex items-center gap-2">
-                  <FaEarthAmericas /> Travel
-                </strong>{" "}
-                – Love to travel to my village, Cox's bazar, Rangamati, Sylhet
-                etc.
-              </li>
-              <li>
-                <strong className="flex items-center gap-2">
-                <BiSolidCameraMovie /> Movie
-                </strong>{" "}
-                – Watching Movies like Bangla, English, Anime, Cartoon, English Series etc.
-              </li>
-            </ul>
+            <Fade cascade damping={0.2}>
+              <ul>
+                <li>
+                  <strong className="flex items-center gap-2">
+                    <IoBookSharp /> Reading
+                  </strong>{" "}
+                  – Reading anime manga
+                </li>
+                <li>
+                  <strong className="flex items-center gap-2">
+                    <IoGameController /> Gaming
+                  </strong>{" "}
+                  – Playing Cricket, Free Fire, GTA-5, Racing, etc.
+                </li>
+                <li>
+                  <strong className="flex items-center gap-2">
+                    <FaMusic /> Music
+                  </strong>{" "}
+                  – Listening to bangla, english songs.
+                </li>
+                <li>
+                  <strong className="flex items-center gap-2">
+                    <FaEarthAmericas /> Travel
+                  </strong>{" "}
+                  – Love to travel to my village, Cox's bazar, Rangamati, Sylhet
+                  etc.
+                </li>
+                <li>
+                  <strong className="flex items-center gap-2">
+                    <BiSolidCameraMovie /> Movie
+                  </strong>{" "}
+                  – Watching Movies like Bangla, English, Anime, Cartoon,
+                  English Series etc.
+                </li>
+              </ul>
+            </Fade>
           </div>
         </div>
       </div>

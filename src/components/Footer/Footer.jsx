@@ -9,6 +9,7 @@ import { FaUserGear } from "react-icons/fa6";
 import { MdOutlineMenuBook } from "react-icons/md";
 import { GrProjects } from "react-icons/gr";
 import { IoMdDownload } from "react-icons/io";
+import { Slide } from "react-awesome-reveal";
 
 const Footer = () => {
   const handleSmoothScroll = (e, id) => {
@@ -24,121 +25,125 @@ const Footer = () => {
   return (
     <footer>
       {/* Main Footer Section */}
-      <section className="relative z-20 max-w-10/12 mx-auto bg-primary rounded-3xl p-8 space-y-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {/* logo, description and social media icons */}
-        <div className="space-y-4">
-          <img className="w-12" src={logo} alt={logo} />
-          <p>
-            Passionate Frontend and Mern-stack developer creating innovative web
-            solutions. Specialized in modern technologies and responsive design.
-          </p>
-          <SocialMediaIcons></SocialMediaIcons>
-        </div>
-        {/* Quick Links */}
-        <div className="space-y-4">
-          <p className="font-bold">Quick Links</p>
-          <ul className="space-y-1">
-            <li>
-              <a
-                className="cursor-pointer flex items-center gap-1"
-                onClick={(e) => handleSmoothScroll(e, "banner")}
-              >
-                <FaHome />
-                Home
-              </a>
-            </li>
-            <li>
-              <a
-                className="cursor-pointer flex items-center gap-1"
-                onClick={(e) => handleSmoothScroll(e, "about")}
-              >
-                <RiContactsFill />
-                About
-              </a>
-            </li>
-            <li>
-              <a
-                className="cursor-pointer flex items-center gap-1"
-                onClick={(e) => handleSmoothScroll(e, "skills")}
-              >
-                <FaUserGear />
-                Skills
-              </a>
-            </li>
-            <li>
-              <a
-                className="cursor-pointer  flex items-center gap-1"
-                onClick={(e) => handleSmoothScroll(e, "educations")}
-              >
-                <MdOutlineMenuBook />
-                Educations
-              </a>
-            </li>
-            <li>
-              <a
-                className="cursor-pointer flex items-center gap-1"
-                onClick={(e) => handleSmoothScroll(e, "projects")}
-              >
-                <GrProjects />
-                Projects
-              </a>
-            </li>
-            <li>
-              <a
-                className="cursor-pointer  flex items-center gap-1"
-                onClick={(e) => handleSmoothScroll(e, "contact")}
-              >
-                <RiContactsBook3Fill />
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        {/* Location & other link */}
-        <div className="space-y-4">
+      <Slide direction="up" duration={1000} triggerOnce>
+        <section className="relative z-20 max-w-10/12 mx-auto bg-primary rounded-3xl p-8 space-y-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* logo, description and social media icons */}
           <div className="space-y-4">
-            <p className="font-bold">Other Links</p>
-            <ul>
+            <img className="w-12" src={logo} alt={logo} />
+            <p>
+              Passionate Frontend and Mern-stack developer creating innovative
+              web solutions. Specialized in modern technologies and responsive
+              design.
+            </p>
+            <SocialMediaIcons></SocialMediaIcons>
+          </div>
+          {/* Quick Links */}
+          <div className="space-y-4">
+            <p className="font-bold">Quick Links</p>
+            <ul className="space-y-1">
               <li>
                 <a
                   className="cursor-pointer flex items-center gap-1"
-                  href="https://parvez-hossain-alif.netlify.app/assets/cv/parvez%20cv.pdf"
-                  target="_blank"
+                  onClick={(e) => handleSmoothScroll(e, "banner")}
                 >
-                  <IoMdDownload />Download CV
+                  <FaHome />
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  className="cursor-pointer flex items-center gap-1"
+                  onClick={(e) => handleSmoothScroll(e, "about")}
+                >
+                  <RiContactsFill />
+                  About
+                </a>
+              </li>
+              <li>
+                <a
+                  className="cursor-pointer flex items-center gap-1"
+                  onClick={(e) => handleSmoothScroll(e, "skills")}
+                >
+                  <FaUserGear />
+                  Skills
+                </a>
+              </li>
+              <li>
+                <a
+                  className="cursor-pointer  flex items-center gap-1"
+                  onClick={(e) => handleSmoothScroll(e, "educations")}
+                >
+                  <MdOutlineMenuBook />
+                  Educations
+                </a>
+              </li>
+              <li>
+                <a
+                  className="cursor-pointer flex items-center gap-1"
+                  onClick={(e) => handleSmoothScroll(e, "projects")}
+                >
+                  <GrProjects />
+                  Projects
+                </a>
+              </li>
+              <li>
+                <a
+                  className="cursor-pointer  flex items-center gap-1"
+                  onClick={(e) => handleSmoothScroll(e, "contact")}
+                >
+                  <RiContactsBook3Fill />
+                  Contact
                 </a>
               </li>
             </ul>
           </div>
-          <div className="space-y-2">
-            <p className="font-bold">Address</p>
-            <p className="flex items-center gap-1">
-              <TbAddressBook size={20} />
-              Tongi, Gazipur, Dhaka
-            </p>
-          </div>
-        </div>
 
-        {/* Contact */}
-        <div className="space-y-4">
-          <p className="font-bold">Contact Info</p>
+          {/* Location & other link */}
           <div className="space-y-4">
-            <p className="flex items-center gap-1">
-              <HiOutlineDevicePhoneMobile size={20} />
-              +880 1743063201
-            </p>
-            <p className="flex items-center gap-1">
-              <HiOutlineDevicePhoneMobile size={20} />
-              +880 1872243808
-            </p>
-            <p className="flex items-center gap-1">
-              <FaBusinessTime size={20} />
-              Available for work
-            </p>
+            <div className="space-y-4">
+              <p className="font-bold">Other Links</p>
+              <ul>
+                <li>
+                  <a
+                    className="cursor-pointer flex items-center gap-1"
+                    href="https://parvez-hossain-alif.netlify.app/assets/cv/parvez%20cv.pdf"
+                    target="_blank"
+                  >
+                    <IoMdDownload />
+                    Download CV
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="space-y-2">
+              <p className="font-bold">Address</p>
+              <p className="flex items-center gap-1">
+                <TbAddressBook size={20} />
+                Tongi, Gazipur, Dhaka
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+
+          {/* Contact */}
+          <div className="space-y-4">
+            <p className="font-bold">Contact Info</p>
+            <div className="space-y-4">
+              <p className="flex items-center gap-1">
+                <HiOutlineDevicePhoneMobile size={20} />
+                +880 1743063201
+              </p>
+              <p className="flex items-center gap-1">
+                <HiOutlineDevicePhoneMobile size={20} />
+                +880 1872243808
+              </p>
+              <p className="flex items-center gap-1">
+                <FaBusinessTime size={20} />
+                Available for work
+              </p>
+            </div>
+          </div>
+        </section>
+      </Slide>
 
       {/* Footer Bottom Section */}
       <section className="bg-secondary z-10 -mt-64 pt-72 pb-7 mx-auto">
