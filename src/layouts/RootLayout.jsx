@@ -5,6 +5,7 @@ import Footer from "../components/Footer/Footer";
 import Banner from "../pages/Home/Banner/Banner";
 import About from "../pages/Home/About/About";
 import Contact from "../pages/Home/Contact/Contact";
+import Skills from "../pages/Home/Skills/Skills";
 
 const RootLayout = () => {
   return (
@@ -24,7 +25,12 @@ const RootLayout = () => {
 
         {/* about section */}
         <section>
-            <About></About>
+          <About></About>
+        </section>
+
+        {/* technical Skills */}
+        <section>
+          <Skills></Skills>
         </section>
 
         {/* contact section */}
