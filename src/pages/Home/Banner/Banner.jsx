@@ -36,7 +36,7 @@ const Banner = () => {
           Passionate about creating responsive and user friendly web application
           <br />I also make the code clean and easy to understand
         </p>
-        <motion.button
+        <motion.a
           animate={{
             scale: [1, 1.1, 1],
           }}
@@ -46,10 +46,12 @@ const Banner = () => {
             ease: "linear",
           }}
           className="btn btn-outline btn-secondary rounded-lg"
+          href="https://parvez-hossain-alif.netlify.app/assets/cv/parvez%20cv.pdf"
+          target="_blank"
         >
           <IoMdDownload size={25} />
           Download CV
-        </motion.button>
+        </motion.a>
 
         <SocialMediaIcons></SocialMediaIcons>
       </div>

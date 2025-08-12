@@ -40,10 +40,17 @@ const NavBar = () => {
               <summary>More</summary>
               <ul className="text-black">
                 <li>
-                  <a href="assets/cv/parvez cv.pdf">Download CV</a>
+                  <a
+                    href="https://parvez-hossain-alif.netlify.app/assets/cv/parvez%20cv.pdf"
+                    target="_blank"
+                  >
+                    Download CV
+                  </a>
                 </li>
                 <li>
-                  <a onClick={(e) => handleSmoothScroll(e, "educations")}>Educations</a>
+                  <a onClick={(e) => handleSmoothScroll(e, "educations")}>
+                    Educations
+                  </a>
                 </li>
               </ul>
             </details>
