@@ -4,14 +4,16 @@ import {
   FaCode,
   FaCss3Alt,
   FaDatabase,
+  FaElementor,
   FaFigma,
   FaGithub,
   FaHtml5,
   FaNodeJs,
   FaReact,
   FaTools,
+  FaWordpress,
 } from "react-icons/fa";
-import { FaUserGear } from "react-icons/fa6";
+import { FaCirclePlus, FaUserGear } from "react-icons/fa6";
 import {
   RiNextjsFill,
   RiSendBackward,
@@ -19,6 +21,8 @@ import {
   RiUserSearchFill,
 } from "react-icons/ri";
 import {
+  SiAdobeillustrator,
+  SiAdobephotoshop,
   SiCloudinary,
   SiDaisyui,
   SiExpress,
@@ -423,7 +427,7 @@ const Skills = () => {
           </div>
         </Slide>
 
-        {/* back end & database & authentication & deploy skills */}
+        {/* back end & database & authentication & deploy skills & additional skills */}
         <Slide direction="right" duration={1000}>
           <div className="space-y-7">
             {/* back end */}
@@ -653,6 +657,128 @@ const Skills = () => {
                 {/* progress bar */}
                 <ProgressBar
                   completed={70}
+                  bgColor="#8ac5f4"
+                  labelColor="#ffffff"
+                  animateOnRender
+                  maxCompleted={100}
+                  transitionDuration="4s"
+                  transitionTimingFunction="ease-in-out"
+                />
+              </div>
+            </div>
+            {/* Additional skill */}
+            <div className="space-y-5">
+              <div className="flex items-center gap-2">
+                <div className="bg-primary p-2 rounded-lg text-white">
+                  <FaCirclePlus size={30} />
+                </div>
+                <span className="text-xl font-bold">Additional Skills</span>
+              </div>
+
+              {/* progress bar card wordpress 90% */}
+              <div className="space-y-2">
+                <div className="flex justify-between items-center">
+                  <div className="flex items-center gap-2">
+                    <FaWordpress size={20} />
+                    Wordpress
+                  </div>
+                  <p>
+                    <CountUp
+                      start={0}
+                      end={90}
+                      duration={5}
+                      enableScrollSpy={true}
+                    />
+                    %
+                  </p>
+                </div>
+                {/* progress bar */}
+                <ProgressBar
+                  completed={90}
+                  bgColor="#8ac5f4"
+                  labelColor="#ffffff"
+                  animateOnRender
+                  maxCompleted={100}
+                  transitionDuration="4s"
+                  transitionTimingFunction="ease-in-out"
+                />
+              </div>
+              {/* progress bar card elementor 95% */}
+              <div className="space-y-2">
+                <div className="flex justify-between items-center">
+                  <div className="flex items-center gap-2">
+                    <FaElementor size={20} />
+                    Elementor
+                  </div>
+                  <p>
+                    <CountUp
+                      start={0}
+                      end={95}
+                      duration={5}
+                      enableScrollSpy={true}
+                    />
+                    %
+                  </p>
+                </div>
+                {/* progress bar */}
+                <ProgressBar
+                  completed={95}
+                  bgColor="#8ac5f4"
+                  labelColor="#ffffff"
+                  animateOnRender
+                  maxCompleted={100}
+                  transitionDuration="4s"
+                  transitionTimingFunction="ease-in-out"
+                />
+              </div>
+              {/* progress bar card adobe photoshop 65% */}
+              <div className="space-y-2">
+                <div className="flex justify-between items-center">
+                  <div className="flex items-center gap-2">
+                    <SiAdobephotoshop size={20} />
+                    Photoshop
+                  </div>
+                  <p>
+                    <CountUp
+                      start={0}
+                      end={65}
+                      duration={5}
+                      enableScrollSpy={true}
+                    />
+                    %
+                  </p>
+                </div>
+                {/* progress bar */}
+                <ProgressBar
+                  completed={65}
+                  bgColor="#8ac5f4"
+                  labelColor="#ffffff"
+                  animateOnRender
+                  maxCompleted={100}
+                  transitionDuration="4s"
+                  transitionTimingFunction="ease-in-out"
+                />
+              </div>
+              {/* progress bar card adobe illustrator 75% */}
+              <div className="space-y-2">
+                <div className="flex justify-between items-center">
+                  <div className="flex items-center gap-2">
+                    <SiAdobeillustrator size={20} />
+                    Illustrator
+                  </div>
+                  <p>
+                    <CountUp
+                      start={0}
+                      end={75}
+                      duration={5}
+                      enableScrollSpy={true}
+                    />
+                    %
+                  </p>
+                </div>
+                {/* progress bar */}
+                <ProgressBar
+                  completed={75}
                   bgColor="#8ac5f4"
                   labelColor="#ffffff"
                   animateOnRender
