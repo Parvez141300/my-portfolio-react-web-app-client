@@ -7,6 +7,7 @@ import About from "../pages/Home/About/About";
 import Contact from "../pages/Home/Contact/Contact";
 import Skills from "../pages/Home/Skills/Skills";
 import Educations from "../pages/Home/Educations/Educations";
+import Projects from "../pages/Home/Porjects/Projects";
 
 const RootLayout = () => {
   return (
@@ -37,6 +38,11 @@ const RootLayout = () => {
         {/* education section */}
         <section>
           <Educations></Educations>
+        </section>
+
+        {/* projections section */}
+        <section>
+          <Projects></Projects>
         </section>
 
         {/* contact section */}
