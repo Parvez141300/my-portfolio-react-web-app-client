@@ -1,5 +1,5 @@
 import React from "react";
-import { Outlet } from "react-router";
+import { Outlet, useLocation } from "react-router";
 import NavBar from "../components/NavBar/NavBar";
 import Footer from "../components/Footer/Footer";
 import Banner from "../pages/Home/Banner/Banner";
@@ -9,10 +9,26 @@ import Skills from "../pages/Home/Skills/Skills";
 import Educations from "../pages/Home/Educations/Educations";
 import Projects from "../pages/Home/Porjects/Projects";
 import { Slide } from "react-awesome-reveal";
+import {
+  EmailIcon,
+  EmailShareButton,
+  FacebookIcon,
+  FacebookMessengerIcon,
+  FacebookMessengerShareButton,
+  FacebookShareButton,
+  LinkedinIcon,
+  LinkedinShareButton,
+  WhatsappIcon,
+  WhatsappShareButton,
+} from "react-share";
 
 const RootLayout = () => {
+  const location = useLocation();
+  const shareUrl = `${window.location.origin}${location.pathname}`;
+  const title = "Check out this awesome portfolio";
+
   return (
-    <div>
+    <div className="relative">
       {/* nav bar start */}
       <nav className="fixed w-full z-50 backdrop-blur-lg bg-primary/50 py-3">
         <Slide direction="down" duration={1500}>
@@ -26,6 +42,29 @@ const RootLayout = () => {
         {/* banner section */}
         <section>
           <Banner></Banner>
+        </section>
+
+        {/* sticky social share links */}
+        <section className="fixed  top-1/2 -translate-y-1/2 left-6  z-20 flex flex-col gap-3">
+          <LinkedinShareButton url={shareUrl} title={title}>
+            <LinkedinIcon size={40} round></LinkedinIcon>
+          </LinkedinShareButton>
+
+          <EmailShareButton url={shareUrl} title={title}>
+            <EmailIcon size={40} round></EmailIcon>
+          </EmailShareButton>
+
+          <FacebookShareButton url={shareUrl} title={title}>
+            <FacebookIcon size={40} round></FacebookIcon>
+          </FacebookShareButton>
+
+          <FacebookMessengerShareButton url={shareUrl} title={title}>
+            <FacebookMessengerIcon size={40} round></FacebookMessengerIcon>
+          </FacebookMessengerShareButton>
+
+          <WhatsappShareButton url={shareUrl} title={title}>
+            <WhatsappIcon size={40} round></WhatsappIcon>
+          </WhatsappShareButton>
         </section>
 
         {/* about section */}
