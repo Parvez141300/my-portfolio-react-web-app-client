@@ -6,6 +6,7 @@ import Banner from "../pages/Home/Banner/Banner";
 import About from "../pages/Home/About/About";
 import Contact from "../pages/Home/Contact/Contact";
 import Skills from "../pages/Home/Skills/Skills";
+import Educations from "../pages/Home/Educations/Educations";
 
 const RootLayout = () => {
   return (
@@ -31,6 +32,11 @@ const RootLayout = () => {
         {/* technical Skills */}
         <section>
           <Skills></Skills>
+        </section>
+
+        {/* education section */}
+        <section>
+          <Educations></Educations>
         </section>
 
         {/* contact section */}
