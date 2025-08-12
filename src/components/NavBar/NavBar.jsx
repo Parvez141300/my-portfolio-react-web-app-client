@@ -4,7 +4,6 @@ import { RiMenu2Line, RiMenu3Fill } from "react-icons/ri";
 import DarkToggleButton from "./shared/DarkToggleButton";
 
 const NavBar = () => {
-
   return (
     <div className="w-10/12 mx-auto flex justify-between items-center">
       {/* menu icon & logo */}
@@ -24,6 +23,9 @@ const NavBar = () => {
             <a href="#header">About</a>
           </li>
           <li>
+            <a href="#features-block">Skills</a>
+          </li>
+          <li>
             <details>
               <summary>More</summary>
               <ul className="text-black">
@@ -35,9 +37,6 @@ const NavBar = () => {
                 </li>
               </ul>
             </details>
-          </li>
-          <li>
-            <a href="#features-block">Skills</a>
           </li>
           <li>
             <a href="#portfolio">Projects</a>
