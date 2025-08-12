@@ -130,11 +130,11 @@ const Footer = () => {
             <div className="space-y-4">
               <p className="flex items-center gap-1">
                 <HiOutlineDevicePhoneMobile size={20} />
-                +880 1743063201
+                <a href="tel:+8801743063201">+880 1743063201</a>
               </p>
               <p className="flex items-center gap-1">
                 <HiOutlineDevicePhoneMobile size={20} />
-                +880 1872243808
+                <a href="tel:+8801872243808">+880 1872243808</a>
               </p>
               <p className="flex items-center gap-1">
                 <FaBusinessTime size={20} />

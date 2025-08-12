@@ -42,14 +42,14 @@ const Contact = () => {
                   <FaPhoneVolume />
                   Phone:
                 </strong>
-                +880 1743063201
+                <a href="tel:+8801743063201">+880 1743063201</a>
               </li>
               <li>
                 <strong className="flex items-center gap-2">
                   <MdMarkEmailRead />
                   Email:
                 </strong>
-                parvez.alif.dev@gmail.com
+                <a href="mailto:parvez.alif.dev@gmail.com" className="hover:underline">parvez.alif.dev@gmail.com</a>
               </li>
             </ul>
           </div>

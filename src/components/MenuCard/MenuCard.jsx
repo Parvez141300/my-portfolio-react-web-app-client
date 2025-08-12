@@ -98,11 +98,17 @@ const MenuCard = ({ className, onLinkClick }) => {
         {/* Contact Info */}
         <div className="space-y-2">
           <p className="flex items-center gap-2">
-            📞 <span>+880 1872243808</span>
-            📞 <span>+880 1743063201</span>
+            📞 <a href="tel:+8801872243808">+880 1872243808</a>
+            📞 <a href="tel:+8801743063201">+880 1743063201</a>
           </p>
           <p className="flex items-center gap-2">
-            📧 <span>parvez.alif.dev@gmail.com</span>
+            📧{" "}
+            <a
+              href="mailto:parvez.alif.dev@gmail.com"
+              className="hover:underline"
+            >
+              parvez.alif.dev@gmail.com
+            </a>
           </p>
           <p className="flex items-center gap-2">
             📍 <span>Tongi, Gazipur, Dhaka</span>
