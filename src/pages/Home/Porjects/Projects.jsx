@@ -25,7 +25,7 @@ const Projects = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* card 1 */}
         <Fade duration={1500}>
-          <div className="rounded-xl overflow-hidden border border-primary/30  shadow-lg">
+          <div className="rounded-xl overflow-hidden border border-primary/30  shadow-lg hover:-translate-y-4 transition-all duration-500">
             {/* Image */}
             <div className="relative">
               <img src={project1} alt={project1} className="w-full" />
@@ -107,7 +107,7 @@ const Projects = () => {
         </Fade>
         {/* card 2 */}
         <Fade duration={1500} delay={500}>
-          <div className="rounded-xl overflow-hidden border border-primary/30  shadow-lg">
+          <div className="rounded-xl overflow-hidden border border-primary/30  shadow-lg hover:-translate-y-4 transition-all duration-500">
             {/* Image */}
             <div className="relative">
               <img src={project2} alt={project2} className="w-full" />
@@ -188,7 +188,7 @@ const Projects = () => {
         </Fade>
         {/* card 3 */}
         <Fade duration={1500} delay={800}>
-          <div className="rounded-xl overflow-hidden border border-primary/30  shadow-lg">
+          <div className="rounded-xl overflow-hidden border border-primary/30  shadow-lg hover:-translate-y-4 transition-all duration-500">
             {/* Image */}
             <div className="relative">
               <img src={project3} alt={project3} className="w-full" />
@@ -207,7 +207,7 @@ const Projects = () => {
               {/* Description */}
               <p className="text-sm text-gray-400">
                 A MERN-stack platform There are many experienced gardener who
-                gives tips how to gardening.
+                gives tips.
               </p>
 
               {/* Tech Stack */}
@@ -242,7 +242,6 @@ const Projects = () => {
                   tip
                 </li>
                 <li>🔹 In my tips page user can edit the tip or delete tip</li>
-                <li>🔹 Reload the page will show a loader for fetch data</li>
               </ul>
 
               {/* Buttons */}
