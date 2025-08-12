@@ -1,9 +1,29 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import logo from "../../assets/logo/PHA Logo Design.png";
 import { RiMenu2Line, RiMenu3Fill } from "react-icons/ri";
 import DarkToggleButton from "./shared/DarkToggleButton";
+import MenuCard from "../MenuCard/MenuCard";
 
 const NavBar = () => {
+  const menuRef = useRef(null);
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setShow(false);
+      }
+    };
+
+    if (show) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [show]);
+
   const handleSmoothScroll = (e, id) => {
     e.preventDefault();
     const element = document.getElementById(id);
@@ -15,13 +35,15 @@ const NavBar = () => {
     }
   };
   return (
-    <div className="w-10/12 mx-auto flex justify-between items-center">
+    <div className="w-10/12 mx-auto flex justify-between items-center relative">
       {/* menu icon & logo */}
       <div className="flex gap-2 items-center">
-        <div className="md:hidden">
+        <button className="md:hidden btn btn-ghost px-0">
           <RiMenu2Line size={25} />
-        </div>
-        <img src={logo} alt={logo} className="w-12" />
+        </button>
+        <a onClick={(e) => handleSmoothScroll(e, 'banner')} className="cursor-pointer">
+          <img src={logo} alt={logo} className="w-12" />
+        </a>
       </div>
       {/* navigation */}
       <div className="navbar-center hidden lg:flex">
@@ -64,11 +86,20 @@ const NavBar = () => {
         </ul>
       </div>
       {/* dark mode button and menu icon */}
-      <div className="flex gap-5 items-center">
+      <div className="flex gap-5 items-center" ref={menuRef}>
         {/* <DarkToggleButton></DarkToggleButton> */}
-        <div className="hidden md:block">
+        <button
+          onClick={() => setShow(!show)}
+          className="hidden md:block btn btn-ghost px-0"
+        >
           <RiMenu3Fill size={25} />
-        </div>
+        </button>
+        {show && (
+          <MenuCard
+            className="mt-[440px] right-0"
+            onLinkClick={handleSmoothScroll}
+          ></MenuCard>
+        )}
       </div>
     </div>
   );
