@@ -9,7 +9,7 @@ import { FaUserGear } from "react-icons/fa6";
 import { MdOutlineMenuBook } from "react-icons/md";
 import { GrProjects } from "react-icons/gr";
 import { IoMdDownload } from "react-icons/io";
-import { Slide } from "react-awesome-reveal";
+import { Fade, Slide } from "react-awesome-reveal";
 
 const Footer = () => {
   const handleSmoothScroll = (e, id) => {
@@ -152,12 +152,14 @@ const Footer = () => {
             <p className="text-center text-white">
               © 2025 Developed by Parvez Hossain Alif
             </p>
-            <a
-              onClick={(e) => handleSmoothScroll(e, "banner")}
-              className="btn btn-primary rounded-lg"
-            >
-              <FaArrowCircleUp size={20} />
-            </a>
+            <Fade>
+              <a
+                onClick={(e) => handleSmoothScroll(e, "banner")}
+                className="btn btn-primary rounded-lg"
+              >
+                <FaArrowCircleUp size={20} />
+              </a>
+            </Fade>
           </div>
         </div>
       </section>
