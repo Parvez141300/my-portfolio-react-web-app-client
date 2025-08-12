@@ -568,7 +568,7 @@ const Skills = () => {
                 <div className="bg-primary p-2 rounded-lg text-white">
                   <RiUserSearchFill size={30} />
                 </div>
-                <span className="text-xl font-bold">Database & storage</span>
+                <span className="text-xl font-bold">Authentication</span>
               </div>
 
               {/* progress bar card firebase 75% */}
@@ -576,7 +576,7 @@ const Skills = () => {
                 <div className="flex justify-between items-center">
                   <div className="flex items-center gap-2">
                     <SiFirebase size={20} />
-                    MongoDB
+                    Firebase
                   </div>
                   <p>
                     <CountUp
