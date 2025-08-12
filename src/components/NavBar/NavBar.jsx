@@ -48,7 +48,7 @@ const NavBar = () => {
       </div>
       {/* dark mode button and menu icon */}
       <div className="flex gap-5 items-center">
-        <DarkToggleButton></DarkToggleButton>
+        {/* <DarkToggleButton></DarkToggleButton> */}
         <div className="hidden md:block">
           <RiMenu3Fill size={25} />
         </div>
