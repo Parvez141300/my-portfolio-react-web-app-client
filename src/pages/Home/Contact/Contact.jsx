@@ -15,7 +15,7 @@ const Contact = () => {
           Contact <span className="underline text-secondary">Me</span>
         </h2>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Contact Card */}
         <div className="bg-gradient-to-t from-primary to-secondary border border-[#99999999] rounded-3xl p-5 space-y-3">
           <div>
