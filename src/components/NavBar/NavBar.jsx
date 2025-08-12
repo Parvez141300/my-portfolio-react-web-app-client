@@ -26,6 +26,7 @@ const NavBar = () => {
 
   const handleSmoothScroll = (e, id) => {
     e.preventDefault();
+    setShow(false)
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({
@@ -38,7 +39,7 @@ const NavBar = () => {
     <div className="w-10/12 mx-auto flex justify-between items-center relative">
       {/* menu icon & logo */}
       <div className="flex gap-2 items-center">
-        <button className="md:hidden btn btn-ghost px-0">
+        <button onClick={() => setShow(!show)} className="md:hidden btn btn-ghost px-0">
           <RiMenu2Line size={25} />
         </button>
         <a onClick={(e) => handleSmoothScroll(e, 'banner')} className="cursor-pointer">
@@ -96,7 +97,7 @@ const NavBar = () => {
         </button>
         {show && (
           <MenuCard
-            className="mt-[440px] right-0"
+            className="mt-[450px] h-[400px] overflow-y-auto -left-7 md:h-[400px] md:mt-[460px] md:left-auto md:right-0"
             onLinkClick={handleSmoothScroll}
           ></MenuCard>
         )}

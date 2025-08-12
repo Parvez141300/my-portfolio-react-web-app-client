@@ -13,7 +13,7 @@ const RootLayout = () => {
   return (
     <div>
       {/* nav bar start */}
-      <nav className="fixed w-full z-50 backdrop-blur-lg bg-primary/30 py-3">
+      <nav className="fixed w-full z-50 backdrop-blur-lg bg-primary/50 py-3">
         <NavBar></NavBar>
       </nav>
       {/* nav bar end */}
