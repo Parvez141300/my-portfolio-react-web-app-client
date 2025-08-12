@@ -1,12 +1,42 @@
 import React from "react";
-import { FaCode, FaCss3Alt, FaHtml5, FaReact } from "react-icons/fa";
+import CountUp from "react-countup";
+import {
+  FaCode,
+  FaCss3Alt,
+  FaDatabase,
+  FaFigma,
+  FaGithub,
+  FaHtml5,
+  FaNodeJs,
+  FaReact,
+  FaTools,
+} from "react-icons/fa";
 import { FaUserGear } from "react-icons/fa6";
-import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { SiDaisyui, SiJavascript } from "react-icons/si";
+import {
+  RiNextjsFill,
+  RiSendBackward,
+  RiTailwindCssFill,
+  RiUserSearchFill,
+} from "react-icons/ri";
+import {
+  SiCloudinary,
+  SiDaisyui,
+  SiExpress,
+  SiFirebase,
+  SiJavascript,
+  SiMaterialdesignicons,
+  SiMongodb,
+  SiNetlify,
+  SiPixlr,
+} from "react-icons/si";
+import ProgressBar from "@ramonak/react-progress-bar";
+import { AiTwotoneApi } from "react-icons/ai";
+import { IoCloudDoneSharp } from "react-icons/io5";
+import { VscVscode } from "react-icons/vsc";
 
 const Skills = () => {
   return (
-    <div className="max-w-10/12 mx-auto space-y-5 min-h-[100vh-73px]">
+    <div className="max-w-10/12 mx-auto space-y-12 min-h-[100vh-73px]">
       <div className="flex justify-center items-center gap-2">
         <span className="text-secondary">
           <FaUserGear size={30} />
@@ -16,103 +46,614 @@ const Skills = () => {
         </h2>
       </div>
       {/* skill cards container */}
-      <div className="space-y-5">
-        <div className="flex items-center gap-2">
-          <div className="bg-primary p-2 rounded-lg text-white">
-            <FaCode size={30} />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        {/* front end & deploy & design skills */}
+        <div className="space-y-8">
+          {/* front end */}
+          <div className="space-y-5">
+            <div className="flex items-center gap-2">
+              <div className="bg-primary p-2 rounded-lg text-white">
+                <FaCode size={30} />
+              </div>
+              <span className="text-xl font-bold">Frontend Development</span>
+            </div>
+
+            {/* progress bar card html 95% */}
+            <div className="space-y-2">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center gap-2">
+                  <FaHtml5 size={20} />
+                  HTML
+                </div>
+                <p>
+                  <CountUp
+                    start={0}
+                    end={95}
+                    duration={5}
+                    enableScrollSpy={true}
+                  />
+                  %
+                </p>
+              </div>
+              {/* progress bar */}
+              <ProgressBar
+                completed={95}
+                bgColor="#8ac5f4"
+                labelColor="#ffffff"
+                animateOnRender
+                maxCompleted={100}
+                transitionDuration="4s"
+                transitionTimingFunction="ease-in-out"
+              />
+            </div>
+            {/* progress bar card css 85% */}
+            <div className="space-y-2">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center gap-2">
+                  <FaCss3Alt size={20} />
+                  CSS
+                </div>
+                <p>
+                  <CountUp
+                    start={0}
+                    end={85}
+                    duration={5}
+                    enableScrollSpy={true}
+                  />
+                  %
+                </p>
+              </div>
+              {/* progress bar */}
+              <ProgressBar
+                completed={85}
+                bgColor="#8ac5f4"
+                labelColor="#ffffff"
+                animateOnRender
+                maxCompleted={100}
+                transitionDuration="4s"
+                transitionTimingFunction="ease-in-out"
+              />
+            </div>
+            {/* progress bar card tailwind 95% */}
+            <div className="space-y-2">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center gap-2">
+                  <RiTailwindCssFill size={20} />
+                  Tailwind
+                </div>
+                <p>
+                  <CountUp
+                    start={0}
+                    end={95}
+                    duration={5}
+                    enableScrollSpy={true}
+                  />
+                  %
+                </p>
+              </div>
+              {/* progress bar */}
+              <ProgressBar
+                completed={85}
+                bgColor="#8ac5f4"
+                labelColor="#ffffff"
+                animateOnRender
+                maxCompleted={100}
+                transitionDuration="4s"
+                transitionTimingFunction="ease-in-out"
+              />
+            </div>
+            {/* progress bar card daisyui 75% */}
+            <div className="space-y-2">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center gap-2">
+                  <SiDaisyui size={20} />
+                  Daisyui
+                </div>
+                <p>
+                  <CountUp
+                    start={0}
+                    end={75}
+                    duration={5}
+                    enableScrollSpy={true}
+                  />
+                  %
+                </p>
+              </div>
+              {/* progress bar */}
+              <ProgressBar
+                completed={75}
+                bgColor="#8ac5f4"
+                labelColor="#ffffff"
+                animateOnRender
+                maxCompleted={100}
+                transitionDuration="4s"
+                transitionTimingFunction="ease-in-out"
+              />
+            </div>
+            {/* progress bar card js 75% */}
+            <div className="space-y-2">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center gap-2">
+                  <SiJavascript size={20} />
+                  JavaScript
+                </div>
+                <p>
+                  <CountUp
+                    start={0}
+                    end={70}
+                    duration={5}
+                    enableScrollSpy={true}
+                  />
+                  %
+                </p>
+              </div>
+              {/* progress bar */}
+              <ProgressBar
+                completed={75}
+                bgColor="#8ac5f4"
+                labelColor="#ffffff"
+                animateOnRender
+                maxCompleted={100}
+                transitionDuration="4s"
+                transitionTimingFunction="ease-in-out"
+              />
+            </div>
+            {/* progress bar card React.js 85% */}
+            <div className="space-y-2">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center gap-2">
+                  <FaReact size={20} />
+                  React.js
+                </div>
+                <p>
+                  <CountUp
+                    start={0}
+                    end={85}
+                    duration={5}
+                    enableScrollSpy={true}
+                  />
+                  %
+                </p>
+              </div>
+              {/* progress bar */}
+              <ProgressBar
+                completed={85}
+                bgColor="#8ac5f4"
+                labelColor="#ffffff"
+                animateOnRender
+                maxCompleted={100}
+                transitionDuration="4s"
+                transitionTimingFunction="ease-in-out"
+              />
+            </div>
+            {/* progress bar card next.js 70% */}
+            <div className="space-y-2">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center gap-2">
+                  <RiNextjsFill size={20} />
+                  Next.js
+                </div>
+                <p>
+                  <CountUp
+                    start={0}
+                    end={70}
+                    duration={5}
+                    enableScrollSpy={true}
+                  />
+                  %
+                </p>
+              </div>
+              {/* progress bar */}
+              <ProgressBar
+                completed={70}
+                bgColor="#8ac5f4"
+                labelColor="#ffffff"
+                animateOnRender
+                maxCompleted={100}
+                transitionDuration="4s"
+                transitionTimingFunction="ease-in-out"
+              />
+            </div>
           </div>
-          <span className="text-xl font-bold">Frontend Development</span>
+          {/* deploy */}
+          <div className="space-y-5">
+            <div className="flex items-center gap-2">
+              <div className="bg-primary p-2 rounded-lg text-white">
+                <IoCloudDoneSharp size={30} />
+              </div>
+              <span className="text-xl font-bold">Deploy and upload</span>
+            </div>
+
+            {/* progress bar card firebase 80% */}
+            <div className="space-y-2">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center gap-2">
+                  <SiFirebase size={20} />
+                  Firebase
+                </div>
+                <p>
+                  <CountUp
+                    start={0}
+                    end={80}
+                    duration={5}
+                    enableScrollSpy={true}
+                  />
+                  %
+                </p>
+              </div>
+              {/* progress bar */}
+              <ProgressBar
+                completed={80}
+                bgColor="#8ac5f4"
+                labelColor="#ffffff"
+                animateOnRender
+                maxCompleted={100}
+                transitionDuration="4s"
+                transitionTimingFunction="ease-in-out"
+              />
+            </div>
+            {/* progress bar card netlify 95% */}
+            <div className="space-y-2">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center gap-2">
+                  <SiNetlify size={20} />
+                  Netlify
+                </div>
+                <p>
+                  <CountUp
+                    start={0}
+                    end={95}
+                    duration={5}
+                    enableScrollSpy={true}
+                  />
+                  %
+                </p>
+              </div>
+              {/* progress bar */}
+              <ProgressBar
+                completed={95}
+                bgColor="#8ac5f4"
+                labelColor="#ffffff"
+                animateOnRender
+                maxCompleted={100}
+                transitionDuration="4s"
+                transitionTimingFunction="ease-in-out"
+              />
+            </div>
+            {/* progress bar card cloudinary 75% */}
+            <div className="space-y-2">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center gap-2">
+                  <SiCloudinary size={20} />
+                  Cloudinary
+                </div>
+                <p>
+                  <CountUp
+                    start={0}
+                    end={75}
+                    duration={5}
+                    enableScrollSpy={true}
+                  />
+                  %
+                </p>
+              </div>
+              {/* progress bar */}
+              <ProgressBar
+                completed={75}
+                bgColor="#8ac5f4"
+                labelColor="#ffffff"
+                animateOnRender
+                maxCompleted={100}
+                transitionDuration="4s"
+                transitionTimingFunction="ease-in-out"
+              />
+            </div>
+          </div>
+          {/* design */}
+          <div className="space-y-5">
+            <div className="flex items-center gap-2">
+              <div className="bg-primary p-2 rounded-lg text-white">
+              <SiMaterialdesignicons size={30} />
+              </div>
+              <span className="text-xl font-bold">Web app design</span>
+            </div>
+
+            {/* progress bar card figma 80% */}
+            <div className="space-y-2">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center gap-2">
+                <FaFigma size={20} />
+                  Firebase
+                </div>
+                <p>
+                  <CountUp
+                    start={0}
+                    end={80}
+                    duration={5}
+                    enableScrollSpy={true}
+                  />
+                  %
+                </p>
+              </div>
+              {/* progress bar */}
+              <ProgressBar
+                completed={80}
+                bgColor="#8ac5f4"
+                labelColor="#ffffff"
+                animateOnRender
+                maxCompleted={100}
+                transitionDuration="4s"
+                transitionTimingFunction="ease-in-out"
+              />
+            </div>
+            {/* progress bar card pixso 75% */}
+            <div className="space-y-2">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center gap-2">
+                <SiPixlr size={20} />
+                  Firebase
+                </div>
+                <p>
+                  <CountUp
+                    start={0}
+                    end={75}
+                    duration={5}
+                    enableScrollSpy={true}
+                  />
+                  %
+                </p>
+              </div>
+              {/* progress bar */}
+              <ProgressBar
+                completed={75}
+                bgColor="#8ac5f4"
+                labelColor="#ffffff"
+                animateOnRender
+                maxCompleted={100}
+                transitionDuration="4s"
+                transitionTimingFunction="ease-in-out"
+              />
+            </div>
+          </div>
         </div>
 
-        {/* progress bar card html 95% */}
-        <div className="space-y-2">
-          <div className="flex justify-between items-center">
+        {/* back end & database & authentication & deploy skills */}
+        <div className="space-y-7">
+          {/* back end */}
+          <div className="space-y-5">
             <div className="flex items-center gap-2">
-              <FaHtml5 size={20} />
-              HTML
+              <div className="bg-primary p-2 rounded-lg text-white">
+                <RiSendBackward size={30} />
+              </div>
+              <span className="text-xl font-bold">Back Development</span>
             </div>
-            <p>95%</p>
+
+            {/* progress bar card Node.js 60% */}
+            <div className="space-y-2">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center gap-2">
+                  <FaNodeJs size={20} />
+                  Node.js
+                </div>
+                <p>
+                  <CountUp
+                    start={0}
+                    end={60}
+                    duration={5}
+                    enableScrollSpy={true}
+                  />
+                  %
+                </p>
+              </div>
+              {/* progress bar */}
+              <ProgressBar
+                completed={60}
+                bgColor="#8ac5f4"
+                labelColor="#ffffff"
+                animateOnRender
+                maxCompleted={100}
+                transitionDuration="4s"
+                transitionTimingFunction="ease-in-out"
+              />
+            </div>
+            {/* progress bar card express 70% */}
+            <div className="space-y-2">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center gap-2">
+                  <SiExpress size={20} />
+                  Express.js
+                </div>
+                <p>
+                  <CountUp
+                    start={0}
+                    end={70}
+                    duration={5}
+                    enableScrollSpy={true}
+                  />
+                  %
+                </p>
+              </div>
+              {/* progress bar */}
+              <ProgressBar
+                completed={70}
+                bgColor="#8ac5f4"
+                labelColor="#ffffff"
+                animateOnRender
+                maxCompleted={100}
+                transitionDuration="4s"
+                transitionTimingFunction="ease-in-out"
+              />
+            </div>
+            {/* progress bar card api 80% */}
+            <div className="space-y-2">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center gap-2">
+                  <AiTwotoneApi size={20} />
+                  API
+                </div>
+                <p>
+                  <CountUp
+                    start={0}
+                    end={80}
+                    duration={5}
+                    enableScrollSpy={true}
+                  />
+                  %
+                </p>
+              </div>
+              {/* progress bar */}
+              <ProgressBar
+                completed={80}
+                bgColor="#8ac5f4"
+                labelColor="#ffffff"
+                animateOnRender
+                maxCompleted={100}
+                transitionDuration="4s"
+                transitionTimingFunction="ease-in-out"
+              />
+            </div>
           </div>
-          <div className="bg-primary h-5 p-1 rounded-full relative">
-            <div className="bg-accent h-3 rounded-full absolute top-1 z-20 w-11/12"></div>
-          </div>
-        </div>
-        {/* progress bar card css 85% */}
-        <div className="space-y-2">
-          <div className="flex justify-between items-center">
+          {/* database */}
+          <div className="space-y-5">
             <div className="flex items-center gap-2">
-              <FaCss3Alt size={20} />
-              CSS
+              <div className="bg-primary p-2 rounded-lg text-white">
+                <FaDatabase size={30} />
+              </div>
+              <span className="text-xl font-bold">Database & storage</span>
             </div>
-            <p>85%</p>
+
+            {/* progress bar card MongoDB 80% */}
+            <div className="space-y-2">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center gap-2">
+                  <SiMongodb size={20} />
+                  MongoDB
+                </div>
+                <p>
+                  <CountUp
+                    start={0}
+                    end={80}
+                    duration={5}
+                    enableScrollSpy={true}
+                  />
+                  %
+                </p>
+              </div>
+              {/* progress bar */}
+              <ProgressBar
+                completed={80}
+                bgColor="#8ac5f4"
+                labelColor="#ffffff"
+                animateOnRender
+                maxCompleted={100}
+                transitionDuration="4s"
+                transitionTimingFunction="ease-in-out"
+              />
+            </div>
           </div>
-          <div className="bg-primary h-5 p-1 rounded-full relative">
-            <div className="bg-accent h-3 rounded-full absolute top-1 z-20 w-10/12"></div>
-          </div>
-        </div>
-        {/* progress bar card tailwind 95% */}
-        <div className="space-y-2">
-          <div className="flex justify-between items-center">
+          {/* authentication */}
+          <div className="space-y-5">
             <div className="flex items-center gap-2">
-              <RiTailwindCssFill size={20} />
-              Tailwind
+              <div className="bg-primary p-2 rounded-lg text-white">
+                <RiUserSearchFill size={30} />
+              </div>
+              <span className="text-xl font-bold">Database & storage</span>
             </div>
-            <p>95%</p>
+
+            {/* progress bar card firebase 75% */}
+            <div className="space-y-2">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center gap-2">
+                  <SiFirebase size={20} />
+                  MongoDB
+                </div>
+                <p>
+                  <CountUp
+                    start={0}
+                    end={75}
+                    duration={5}
+                    enableScrollSpy={true}
+                  />
+                  %
+                </p>
+              </div>
+              {/* progress bar */}
+              <ProgressBar
+                completed={75}
+                bgColor="#8ac5f4"
+                labelColor="#ffffff"
+                animateOnRender
+                maxCompleted={100}
+                transitionDuration="4s"
+                transitionTimingFunction="ease-in-out"
+              />
+            </div>
           </div>
-          <div className="bg-primary h-5 p-1 rounded-full relative">
-            <div className="bg-accent h-3 rounded-full absolute top-1 z-20 w-11/12"></div>
-          </div>
-        </div>
-        {/* progress bar card daisyui 85% */}
-        <div className="space-y-2">
-          <div className="flex justify-between items-center">
+          {/* tools */}
+          <div className="space-y-5">
             <div className="flex items-center gap-2">
-              <SiDaisyui size={20} />
-              Tailwind
+              <div className="bg-primary p-2 rounded-lg text-white">
+                <FaTools size={30} />
+              </div>
+              <span className="text-xl font-bold">Tools</span>
             </div>
-            <p>85%</p>
-          </div>
-          <div className="bg-primary h-5 p-1 rounded-full relative">
-            <div className="bg-accent h-3 rounded-full absolute top-1 z-20 w-10/12"></div>
-          </div>
-        </div>
-        {/* progress bar card js 75% */}
-        <div className="space-y-2">
-          <div className="flex justify-between items-center">
-            <div className="flex items-center gap-2">
-              <SiJavascript size={20} />
-              JavaScript
+
+            {/* progress bar card github 50% */}
+            <div className="space-y-2">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center gap-2">
+                  <FaGithub size={20} />
+                  Github
+                </div>
+                <p>
+                  <CountUp
+                    start={0}
+                    end={50}
+                    duration={5}
+                    enableScrollSpy={true}
+                  />
+                  %
+                </p>
+              </div>
+              {/* progress bar */}
+              <ProgressBar
+                completed={50}
+                bgColor="#8ac5f4"
+                labelColor="#ffffff"
+                animateOnRender
+                maxCompleted={100}
+                transitionDuration="4s"
+                transitionTimingFunction="ease-in-out"
+              />
             </div>
-            <p>70%</p>
-          </div>
-          <div className="bg-primary h-5 p-1 rounded-full relative">
-            <div className="bg-accent h-3 rounded-full absolute top-1 z-20 w-7/12"></div>
-          </div>
-        </div>
-        {/* progress bar card React.js 85% */}
-        <div className="space-y-2">
-          <div className="flex justify-between items-center">
-            <div className="flex items-center gap-2">
-              <FaReact size={20} />
-              React.js
+            {/* progress bar card vs code 50% */}
+            <div className="space-y-2">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center gap-2">
+                <VscVscode size={20} />
+                  VS Code
+                </div>
+                <p>
+                  <CountUp
+                    start={0}
+                    end={70}
+                    duration={5}
+                    enableScrollSpy={true}
+                  />
+                  %
+                </p>
+              </div>
+              {/* progress bar */}
+              <ProgressBar
+                completed={70}
+                bgColor="#8ac5f4"
+                labelColor="#ffffff"
+                animateOnRender
+                maxCompleted={100}
+                transitionDuration="4s"
+                transitionTimingFunction="ease-in-out"
+              />
             </div>
-            <p>85%</p>
-          </div>
-          <div className="bg-primary h-5 p-1 rounded-full relative">
-            <div className="bg-accent h-3 rounded-full absolute top-1 z-20 w-10/12"></div>
-          </div>
-        </div>
-        {/* progress bar card React.js */}
-        <div className="space-y-2">
-          <div className="flex justify-between items-center">
-            <div className="flex items-center gap-2">
-              <RiNextjsFill size={20} />
-              Next.js
-            </div>
-            <p>70%</p>
-          </div>
-          <div className="bg-primary h-5 p-1 rounded-full relative">
-            <div className="bg-accent h-3 rounded-full absolute top-1 z-20 w-7/12"></div>
           </div>
         </div>
       </div>
