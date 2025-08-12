@@ -21,32 +21,26 @@ const Footer = () => {
         {/* Quick Links */}
         <div className="space-y-4">
           <p className="font-bold">Quick Links</p>
-          <div>
-            <p>
+          <ul>
+            <li>
               <a href="#header">Home</a>
-            </p>
-            <p>
-              <a href="#resume-block">Resume</a>
-            </p>
-            <p>
-              <a href="#education-block">Education</a>
-            </p>
-            <p>
-              <a href="#features-block">Features</a>
-            </p>
-            <p>
-              <a href="#experience-block">Experience</a>
-            </p>
-            <p>
-              <a href="#portfolio">Portfolio</a>
-            </p>
-            <p>
-              <a href="#pricing">Pricing</a>
-            </p>
-            <p>
+            </li>
+            <li>
+              <a href="#resume-block">About</a>
+            </li>
+            <li>
+              <a href="#education-block">Skills</a>
+            </li>
+            <li>
+              <a href="#features-block">Education</a>
+            </li>
+            <li>
+              <a href="#experience-block">Projects</a>
+            </li>
+            <li>
               <a href="#contact">Contact</a>
-            </p>
-          </div>
+            </li>
+          </ul>
         </div>
 
         {/* Location */}
