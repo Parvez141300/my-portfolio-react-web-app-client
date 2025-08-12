@@ -5,6 +5,7 @@ import { RiContactsBook3Fill, RiContactsFill } from "react-icons/ri";
 import { FaUserGear } from "react-icons/fa6";
 import { MdOutlineMenuBook } from "react-icons/md";
 import { GrProjects } from "react-icons/gr";
+import SocialMediaIcons from "../SocialMediaIcons/SocialMediaIcons";
 
 const MenuCard = ({ className, onLinkClick }) => {
   return (
@@ -107,6 +108,9 @@ const MenuCard = ({ className, onLinkClick }) => {
             📍 <span>Tongi, Gazipur, Dhaka</span>
           </p>
         </div>
+
+        {/* social links */}
+        <SocialMediaIcons></SocialMediaIcons>
       </div>
     </div>
   );

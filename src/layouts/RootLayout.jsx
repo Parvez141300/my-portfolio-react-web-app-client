@@ -19,7 +19,7 @@ const RootLayout = () => {
       {/* nav bar end */}
 
       {/* main for route change */}
-      <main className="min-h-screen pt-24 space-y-12">
+      <main className="min-h-screen pt-24 space-y-14">
         {/* banner section */}
         <section>
           <Banner></Banner>

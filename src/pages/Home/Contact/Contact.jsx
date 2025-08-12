@@ -6,7 +6,7 @@ import { MdMarkEmailRead } from "react-icons/md";
 
 const Contact = () => {
   return (
-    <section id="contact" className="max-w-10/12 mx-auto space-y-12 min-h-[100vh-73px]">
+    <section id="contact" className="max-w-10/12 mx-auto space-y-8 md:space-y-12 min-h-[100vh-73px]">
       <div className="flex justify-center items-center gap-2">
         <span className="text-secondary">
           <RiContactsBook3Fill size={30} />
@@ -50,7 +50,7 @@ const Contact = () => {
         </div>
 
         {/* Contact Form */}
-        <form className="bg-gradient-to-tr from-primary to-secondary rounded-3xl p-5 flex flex-col justify-center col-span-2 space-y-5">
+        <form className="bg-gradient-to-tr from-primary to-secondary rounded-3xl p-5 flex flex-col justify-center lg:col-span-2 space-y-5">
           <div className="flex flex-col md:flex-row gap-5">
             <div className="w-full">
               <p>Name</p>

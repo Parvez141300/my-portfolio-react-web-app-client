@@ -36,7 +36,7 @@ import { VscVscode } from "react-icons/vsc";
 
 const Skills = () => {
   return (
-    <div id="skills" className="max-w-10/12 mx-auto space-y-12 min-h-[100vh-73px]">
+    <div id="skills" className="max-w-10/12 mx-auto space-y-8 md:space-y-12 min-h-[100vh-73px]">
       <div className="flex justify-center items-center gap-2">
         <span className="text-secondary">
           <FaUserGear size={30} />
