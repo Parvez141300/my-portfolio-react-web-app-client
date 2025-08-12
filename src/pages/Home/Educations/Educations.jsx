@@ -10,7 +10,10 @@ import { SlCalender } from "react-icons/sl";
 
 const Educations = () => {
   return (
-    <div id="educations" className="max-w-10/12 mx-auto space-y-8 md:space-y-12 min-h-[100vh-73px]">
+    <div
+      id="educations"
+      className="max-w-10/12 mx-auto space-y-8 md:space-y-12 min-h-[100vh-73px]"
+    >
       <div className="flex justify-center items-center gap-2">
         <span className="text-secondary">
           <MdOutlineMenuBook size={30} />
@@ -63,7 +66,7 @@ const Educations = () => {
             Dattapara Nabadiganta High School
           </h5>
           <h3 className="text-sm flex items-center gap-2">
-            <FaUserGraduate size={20} /> Diploma-in-engineering
+            <FaUserGraduate size={20} /> Secondary School Certificate(S.S.C)
           </h3>
 
           <h6 className="flex items-center gap-2 mb-5 text-sm">
@@ -71,7 +74,12 @@ const Educations = () => {
             (2017 - 2018)
           </h6>
           <p className="text-justify">
-          I completed my Secondary School Certificate (SSC) in Business Studies from Dattapara Nabadiganta High School, where I gained a strong foundation in accounting, commerce, and economics. The curriculum honed my analytical skills and understanding of business operations, preparing me for further academic and professional pursuits in the commercial sector.
+            I completed my Secondary School Certificate (SSC) in Business
+            Studies from Dattapara Nabadiganta High School, where I gained a
+            strong foundation in accounting, commerce, and economics. The
+            curriculum honed my analytical skills and understanding of business
+            operations, preparing me for further academic and professional
+            pursuits in the commercial sector.
           </p>
           <h5 className="flex items-center gap-2 font-bold">
             <FaAward />
