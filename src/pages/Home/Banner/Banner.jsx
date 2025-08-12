@@ -24,6 +24,7 @@ const Banner = () => {
               "a Frontend Developer",
               "a Web App Builder",
               "a React Developer",
+              "a Mern Stack Developer"
             ]}
             cursor={true}
             loop={true}
