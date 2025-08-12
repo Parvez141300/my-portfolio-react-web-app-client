@@ -25,28 +25,22 @@ const NavBar = () => {
           </li>
           <li>
             <details>
-              <summary>Resume</summary>
-              <ul>
+              <summary>More</summary>
+              <ul className="text-black">
                 <li>
                   <a href="assets/cv/parvez cv.pdf">Download CV</a>
                 </li>
                 <li>
                   <a href="#education-block">Education</a>
                 </li>
-                <li>
-                  <a href="#experience-block">Experience</a>
-                </li>
               </ul>
             </details>
           </li>
           <li>
-            <a href="#features-block">Features</a>
+            <a href="#features-block">Skills</a>
           </li>
           <li>
-            <a href="#portfolio">Portfolio</a>
-          </li>
-          <li>
-            <a href="#pricing">Pricing</a>
+            <a href="#portfolio">Projects</a>
           </li>
           <li>
             <a href="#contact">Contact</a>
