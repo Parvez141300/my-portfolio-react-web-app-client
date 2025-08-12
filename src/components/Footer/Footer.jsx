@@ -1,8 +1,14 @@
 import React from "react";
-import { FaArrowCircleUp, FaBusinessTime } from "react-icons/fa";
+import { FaArrowCircleUp, FaBusinessTime, FaHome } from "react-icons/fa";
 import { HiOutlineDevicePhoneMobile } from "react-icons/hi2";
 import logo from "../../assets/logo/PHA Logo Design.png";
 import SocialMediaIcons from "../SocialMediaIcons/SocialMediaIcons";
+import { TbAddressBook } from "react-icons/tb";
+import { RiContactsBook3Fill, RiContactsFill } from "react-icons/ri";
+import { FaUserGear } from "react-icons/fa6";
+import { MdOutlineMenuBook } from "react-icons/md";
+import { GrProjects } from "react-icons/gr";
+import { IoMdDownload } from "react-icons/io";
 
 const Footer = () => {
   const handleSmoothScroll = (e, id) => {
@@ -18,60 +24,98 @@ const Footer = () => {
   return (
     <footer>
       {/* Main Footer Section */}
-      <section className="relative z-20 max-w-10/12 mx-auto bg-primary rounded-3xl p-8 space-y-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+      <section className="relative z-20 max-w-10/12 mx-auto bg-primary rounded-3xl p-8 space-y-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {/* logo, description and social media icons */}
         <div className="space-y-4">
           <img className="w-12" src={logo} alt={logo} />
           <p>
-            Passionate full-stack developer creating innovative web solutions.
-            Specialized in modern technologies and responsive design.
+            Passionate Frontend and Mern-stack developer creating innovative web
+            solutions. Specialized in modern technologies and responsive design.
           </p>
           <SocialMediaIcons></SocialMediaIcons>
         </div>
         {/* Quick Links */}
         <div className="space-y-4">
           <p className="font-bold">Quick Links</p>
-          <ul>
+          <ul className="space-y-1">
             <li>
-              <a href="#header">Home</a>
+              <a
+                className="cursor-pointer flex items-center gap-1"
+                onClick={(e) => handleSmoothScroll(e, "banner")}
+              >
+                <FaHome />
+                Home
+              </a>
             </li>
             <li>
-              <a href="#resume-block">About</a>
+              <a
+                className="cursor-pointer flex items-center gap-1"
+                onClick={(e) => handleSmoothScroll(e, "about")}
+              >
+                <RiContactsFill />
+                About
+              </a>
             </li>
             <li>
-              <a href="#education-block">Skills</a>
+              <a
+                className="cursor-pointer flex items-center gap-1"
+                onClick={(e) => handleSmoothScroll(e, "skills")}
+              >
+                <FaUserGear />
+                Skills
+              </a>
             </li>
             <li>
-              <a href="#features-block">Education</a>
+              <a
+                className="cursor-pointer  flex items-center gap-1"
+                onClick={(e) => handleSmoothScroll(e, "educations")}
+              >
+                <MdOutlineMenuBook />
+                Educations
+              </a>
             </li>
             <li>
-              <a href="#experience-block">Projects</a>
+              <a
+                className="cursor-pointer flex items-center gap-1"
+                onClick={(e) => handleSmoothScroll(e, "projects")}
+              >
+                <GrProjects />
+                Projects
+              </a>
             </li>
             <li>
-              <a href="#contact">Contact</a>
+              <a
+                className="cursor-pointer  flex items-center gap-1"
+                onClick={(e) => handleSmoothScroll(e, "contact")}
+              >
+                <RiContactsBook3Fill />
+                Contact
+              </a>
             </li>
           </ul>
         </div>
 
-        {/* Location */}
+        {/* Location & other link */}
         <div className="space-y-4">
-          <p className="font-bold">Location</p>
-          <div className="">
-            <iframe
-              className="w-1/2"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7294.337413850228!2d90.4003733!3d23.91907935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c4efb52c6e19%3A0x62c5fd45a44c2f6!2sErshadnagar%2C%20Tongi!5e0!3m2!1sen!2sbd!4v1741415259946!5m2!1sen!2sbd"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Google Maps Location"
-            ></iframe>
+          <div className="space-y-4">
+            <p className="font-bold">Other Links</p>
+            <ul>
+              <li>
+                <a
+                  className="cursor-pointer flex items-center gap-1"
+                  href="https://parvez-hossain-alif.netlify.app/assets/cv/parvez%20cv.pdf"
+                  target="_blank"
+                >
+                  <IoMdDownload />Download CV
+                </a>
+              </li>
+            </ul>
           </div>
           <div className="space-y-2">
             <p className="font-bold">Address</p>
-            <p>
-              <i className="fa-solid fa-location-dot"></i> Ershad Nagar, Tongi,
-              Gazipur
+            <p className="flex items-center gap-1">
+              <TbAddressBook size={20} />
+              Tongi, Gazipur, Dhaka
             </p>
           </div>
         </div>
