@@ -7,7 +7,7 @@ import project3 from "../../../assets/projects-images/project-3.png"
 
 const Projects = () => {
   return (
-    <div className="max-w-10/12 mx-auto space-y-12 min-h-[100vh-73px]">
+    <div id="projects" className="max-w-10/12 mx-auto space-y-12 min-h-[100vh-73px]">
       <div className="flex justify-center items-center gap-2">
         <span className="text-secondary">
           <GrProjects size={20} />

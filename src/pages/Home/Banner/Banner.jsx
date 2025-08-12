@@ -8,7 +8,7 @@ import SocialMediaIcons from "../../../components/SocialMediaIcons/SocialMediaIc
 
 const Banner = () => {
   return (
-    <div className="w-10/12 mx-auto flex flex-col gap-10 md:gap-0 lg:flex-row lg:justify-center lg:items-center min-h-[calc(100vh-73px)]">
+    <div id="banner" className="w-10/12 mx-auto flex flex-col gap-10 md:gap-0 lg:flex-row lg:justify-center lg:items-center min-h-[calc(100vh-73px)]">
       {/* banner text content */}
       <div className="space-y-3 md:space-y-5 flex-1">
         <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">

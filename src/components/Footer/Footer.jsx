@@ -5,6 +5,16 @@ import logo from "../../assets/logo/PHA Logo Design.png";
 import SocialMediaIcons from "../SocialMediaIcons/SocialMediaIcons";
 
 const Footer = () => {
+  const handleSmoothScroll = (e, id) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
   return (
     <footer>
       {/* Main Footer Section */}
@@ -93,9 +103,12 @@ const Footer = () => {
             <p className="text-center text-white">
               © 2025 Developed by Parvez Hossain Alif
             </p>
-            <button className="btn btn-primary rounded-lg">
+            <a
+              onClick={(e) => handleSmoothScroll(e, "banner")}
+              className="btn btn-primary rounded-lg"
+            >
               <FaArrowCircleUp size={20} />
-            </button>
+            </a>
           </div>
         </div>
       </section>

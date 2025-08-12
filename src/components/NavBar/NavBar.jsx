@@ -4,6 +4,16 @@ import { RiMenu2Line, RiMenu3Fill } from "react-icons/ri";
 import DarkToggleButton from "./shared/DarkToggleButton";
 
 const NavBar = () => {
+  const handleSmoothScroll = (e, id) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
   return (
     <div className="w-10/12 mx-auto flex justify-between items-center">
       {/* menu icon & logo */}
@@ -17,13 +27,13 @@ const NavBar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a href="#header">Home</a>
+            <a onClick={(e) => handleSmoothScroll(e, "banner")}>Home</a>
           </li>
           <li>
-            <a href="#header">About</a>
+            <a onClick={(e) => handleSmoothScroll(e, "about")}>About</a>
           </li>
           <li>
-            <a href="#features-block">Skills</a>
+            <a onClick={(e) => handleSmoothScroll(e, "skills")}>Skills</a>
           </li>
           <li>
             <details>
@@ -33,16 +43,16 @@ const NavBar = () => {
                   <a href="assets/cv/parvez cv.pdf">Download CV</a>
                 </li>
                 <li>
-                  <a href="#education-block">Education</a>
+                  <a onClick={(e) => handleSmoothScroll(e, "educations")}>Educations</a>
                 </li>
               </ul>
             </details>
           </li>
           <li>
-            <a href="#portfolio">Projects</a>
+            <a onClick={(e) => handleSmoothScroll(e, "projects")}>Projects</a>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <a onClick={(e) => handleSmoothScroll(e, "contact")}>Contact</a>
           </li>
         </ul>
       </div>
