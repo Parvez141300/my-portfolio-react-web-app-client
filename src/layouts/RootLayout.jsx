@@ -13,14 +13,13 @@ import {
   EmailIcon,
   EmailShareButton,
   FacebookIcon,
-  FacebookMessengerIcon,
-  FacebookMessengerShareButton,
   FacebookShareButton,
   LinkedinIcon,
   LinkedinShareButton,
   WhatsappIcon,
   WhatsappShareButton,
 } from "react-share";
+import MessengerChat from "../components/MessengerChat/MessengerChat";
 
 const RootLayout = () => {
   const location = useLocation();
@@ -57,10 +56,6 @@ const RootLayout = () => {
           <FacebookShareButton url={shareUrl} title={title}>
             <FacebookIcon size={40} round></FacebookIcon>
           </FacebookShareButton>
-
-          <FacebookMessengerShareButton url={shareUrl} title={title}>
-            <FacebookMessengerIcon size={40} round></FacebookMessengerIcon>
-          </FacebookMessengerShareButton>
 
           <WhatsappShareButton url={shareUrl} title={title}>
             <WhatsappIcon size={40} round></WhatsappIcon>
