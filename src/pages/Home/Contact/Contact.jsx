@@ -1,11 +1,45 @@
-import React from "react";
+import React, { useRef } from "react";
 import contactImage from "../../../assets/contact-image/contact.png";
 import { RiContactsBook3Fill } from "react-icons/ri";
 import { FaPhoneVolume } from "react-icons/fa";
 import { MdMarkEmailRead } from "react-icons/md";
 import { Slide } from "react-awesome-reveal";
+import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
 
 const Contact = () => {
+  const form = useRef();
+  console.log(form);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_9ryzell", "template_gngjfx6", form.current, {
+        publicKey: "uTZJMvPF0yj6RtX2m",
+      })
+      .then(
+        (result) => {
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Successfully send message",
+            showConfirmButton: false,
+            timer: 1500
+          });
+        },
+        (error) => {
+          Swal.fire({
+            position: "center",
+            icon: "error",
+            title: `${error.text}`,
+            showConfirmButton: false,
+            timer: 1500
+          });
+        }
+      );
+  };
+
   return (
     <section
       id="contact"
@@ -49,18 +83,33 @@ const Contact = () => {
                   <MdMarkEmailRead />
                   Email:
                 </strong>
-                <a href="mailto:parvez.alif.dev@gmail.com" className="hover:underline">parvez.alif.dev@gmail.com</a>
+                <a
+                  href="mailto:parvez.alif.dev@gmail.com"
+                  className="hover:underline"
+                >
+                  parvez.alif.dev@gmail.com
+                </a>
               </li>
             </ul>
           </div>
         </Slide>
 
         {/* Contact Form */}
-        <form className="bg-gradient-to-tr from-primary to-secondary rounded-3xl p-5 flex flex-col justify-center lg:col-span-2 space-y-5">
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          className="bg-gradient-to-tr from-primary to-secondary rounded-3xl p-5 flex flex-col justify-center lg:col-span-2 space-y-5"
+        >
           <div className="flex flex-col md:flex-row gap-5">
+            <input
+              type="hidden"
+              name="time"
+              value={new Date().toLocaleString()}
+            />
             <div className="w-full">
               <p>Name</p>
               <input
+                name="user_name"
                 required
                 className="bg-white text-xs md:text-base rounded-xl p-2 w-full border-none"
                 type="text"
@@ -70,6 +119,7 @@ const Contact = () => {
             <div className="w-full">
               <p>Phone</p>
               <input
+                name="user_phone"
                 required
                 className="bg-white text-xs md:text-base rounded-xl p-2 w-full border-none"
                 type="number"
@@ -81,6 +131,7 @@ const Contact = () => {
           <div>
             <p>Email</p>
             <input
+              name="user_email"
               required
               className="bg-white text-xs md:text-base rounded-xl p-2 w-full border-none"
               type="email"
@@ -91,6 +142,7 @@ const Contact = () => {
           <div>
             <p>Subject</p>
             <input
+              name="subject"
               className="bg-white text-xs md:text-base rounded-xl p-2 w-full border-none"
               type="text"
               placeholder="Enter Your Subject"
@@ -100,6 +152,7 @@ const Contact = () => {
           <div>
             <p>Message</p>
             <textarea
+              name="message"
               required
               className="bg-white text-xs md:text-base rounded-xl p-2 border-none w-full h-36"
               placeholder="Enter Your Message"
