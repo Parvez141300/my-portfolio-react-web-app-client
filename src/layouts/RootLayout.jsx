@@ -30,7 +30,7 @@ const RootLayout = () => {
   return (
     <div className="relative">
       {/* nav bar start */}
-      <nav className="fixed w-full z-50 backdrop-blur-lg bg-primary/50 py-3">
+      <nav className="fixed w-full z-50 backdrop-blur-lg bg-secondary/50 py-3">
         <Slide direction="down" duration={1500}>
           <NavBar></NavBar>
         </Slide>
