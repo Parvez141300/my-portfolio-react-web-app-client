@@ -9,7 +9,6 @@ import Swal from "sweetalert2";
 
 const Contact = () => {
   const form = useRef();
-  console.log(form);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -27,6 +26,7 @@ const Contact = () => {
             showConfirmButton: false,
             timer: 1500
           });
+          form.current.reset();
         },
         (error) => {
           Swal.fire({
