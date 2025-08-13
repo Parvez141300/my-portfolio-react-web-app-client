@@ -19,7 +19,6 @@ import {
   WhatsappIcon,
   WhatsappShareButton,
 } from "react-share";
-import MessengerChat from "../components/MessengerChat/MessengerChat";
 
 const RootLayout = () => {
   const location = useLocation();
