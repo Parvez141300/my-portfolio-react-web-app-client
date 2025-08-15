@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Outlet, useLocation } from "react-router";
 import NavBar from "../components/NavBar/NavBar";
 import Footer from "../components/Footer/Footer";
@@ -19,11 +19,23 @@ import {
   WhatsappIcon,
   WhatsappShareButton,
 } from "react-share";
+import { FaLink } from "react-icons/fa";
 
 const RootLayout = () => {
   const location = useLocation();
   const shareUrl = `${window.location.origin}${location.pathname}`;
   const title = "Check out this awesome portfolio";
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    const url = window.location.href; //get current url
+    navigator.clipboard.writeText(url).then(() => {
+      setCopied(true);
+      setTimeout(() => {
+        setCopied(false);
+      }, 2000);
+    });
+  };
 
   return (
     <div className="relative">
@@ -59,6 +71,20 @@ const RootLayout = () => {
           <WhatsappShareButton url={shareUrl} title={title}>
             <WhatsappIcon size={40} round></WhatsappIcon>
           </WhatsappShareButton>
+
+          <div className="relative flex flex-col">
+            <div className="w-fit">
+              <button
+                onClick={handleCopy}
+                className="btn btn-secondary rounded-full px-2 py-2"
+              >
+                <FaLink size={20} />
+              </button>
+            </div>
+            {copied && (
+              <span className="sticky top-0 text-green-500">Copied!</span>
+            )}
+          </div>
         </section>
 
         {/* about section */}
