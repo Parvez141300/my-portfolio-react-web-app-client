@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { themeChange } from "theme-change";
 
 const DarkToggleButton = () => {
   return (
