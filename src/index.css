@@ -24,8 +24,6 @@
     --color-base-500: #010e0d;
 }
 
-@layer base {
-    :root {
-        font-family: "Poppins", sans-serif;
-    }
+:root {
+    font-family: "Poppins", sans-serif;
 }
