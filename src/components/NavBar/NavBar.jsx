@@ -122,7 +122,7 @@ const NavBar = () => {
       </div>
       {/* dark mode button and menu icon */}
       <div className="flex gap-5 items-center" ref={menuRef}>
-        {/* <DarkToggleButton></DarkToggleButton> */}
+        <DarkToggleButton></DarkToggleButton>
         <button
           onClick={() => setShow(!show)}
           className="hidden md:block btn btn-ghost px-0"
