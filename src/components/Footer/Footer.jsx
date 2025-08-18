@@ -26,7 +26,7 @@ const Footer = () => {
     <footer>
       {/* Main Footer Section */}
       <Slide direction="up" duration={1000} triggerOnce>
-        <section className="relative z-20 max-w-10/12 mx-auto bg-primary rounded-3xl p-8 space-y-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <section className="relative z-20 max-w-10/12 mx-auto bg-primary rounded-xl p-8 space-y-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-accent">
           {/* logo, description and social media icons */}
           <div className="space-y-4">
             <img className="w-12" src={logo} alt={logo} />
@@ -146,10 +146,10 @@ const Footer = () => {
       </Slide>
 
       {/* Footer Bottom Section */}
-      <section className="bg-secondary z-10 -mt-64 pt-72 pb-7 mx-auto">
+      <section className="bg-secondary z-10 -mt-64 pt-72 pb-7 mx-auto text-accent">
         <div className="z-20 w-11/12 md:w-10/12 mx-auto">
           <div className="flex justify-between items-center">
-            <p className="text-center text-white">
+            <p className="text-center">
               © 2025 Developed by Parvez Hossain Alif
             </p>
             <Fade>
