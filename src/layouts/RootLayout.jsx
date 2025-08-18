@@ -76,7 +76,7 @@ const RootLayout = () => {
             <div className="w-fit">
               <button
                 onClick={handleCopy}
-                className="btn btn-secondary rounded-full px-2 py-2"
+                className="btn btn-primary rounded-full px-2 py-2"
               >
                 <FaLink size={20} />
               </button>

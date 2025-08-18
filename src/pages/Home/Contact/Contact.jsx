@@ -111,7 +111,7 @@ const Contact = () => {
               <input
                 name="user_name"
                 required
-                className="bg-base-100 text-xs md:text-base rounded-xl p-2 w-full border-none"
+                className="input bg-base-100 w-full focus:outline-0"
                 type="text"
                 placeholder="Enter Your Name"
               />
@@ -121,7 +121,7 @@ const Contact = () => {
               <input
                 name="user_phone"
                 required
-                className="bg-base-100 text-xs md:text-base rounded-xl p-2 w-full border-none"
+                className="input bg-base-100 w-full focus:outline-0"
                 type="number"
                 placeholder="Enter Your Phone Number"
               />
@@ -133,7 +133,7 @@ const Contact = () => {
             <input
               name="user_email"
               required
-              className="bg-base-100 text-xs md:text-base rounded-xl p-2 w-full border-none"
+              className="input bg-base-100 w-full focus:outline-0"
               type="email"
               placeholder="Enter Your Email"
             />
@@ -143,7 +143,7 @@ const Contact = () => {
             <p>Subject</p>
             <input
               name="subject"
-              className="bg-base-100 text-xs md:text-base rounded-xl p-2 w-full border-none"
+              className="input bg-base-100 w-full focus:outline-0"
               type="text"
               placeholder="Enter Your Subject"
             />
@@ -154,7 +154,7 @@ const Contact = () => {
             <textarea
               name="message"
               required
-              className="bg-base-100 text-xs md:text-base rounded-xl p-2 border-none w-full h-36"
+              className="bg-base-100 text-xs md:text-base rounded-lg p-2 border-none w-full h-36"
               placeholder="Enter Your Message"
             ></textarea>
           </div>
