@@ -24,11 +24,11 @@ const Projects = () => {
       {/* project card container */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* card 1 */}
-        <Fade duration={1500}>
-          <div className="rounded-xl overflow-hidden border border-primary/30  shadow-lg hover:-translate-y-4 transition-all duration-500">
+        <Fade duration={1000}>
+          <div className="h-full flex flex-col rounded-xl overflow-hidden border border-primary/30  shadow-lg hover:-translate-y-4 transition-all duration-500">
             {/* Image */}
             <div className="relative">
-              <img src={project1} alt={project1} className="w-full" />
+              <img src={project1} alt={project1} className="w-full h-52" />
               <span className="absolute top-2 right-2 bg-cyan-500 text-black px-2 py-1 rounded-md text-xs font-semibold">
                 Full-Stack
               </span>
@@ -106,8 +106,8 @@ const Projects = () => {
           </div>
         </Fade>
         {/* card 2 */}
-        <Fade duration={1500} delay={500}>
-          <div className="rounded-xl overflow-hidden border border-primary/30  shadow-lg hover:-translate-y-4 transition-all duration-500">
+        <Fade duration={1000} delay={500}>
+          <div className="h-full flex flex-col rounded-xl overflow-hidden border border-primary/30  shadow-lg hover:-translate-y-4 transition-all duration-500">
             {/* Image */}
             <div className="relative">
               <img src={project2} alt={project2} className="w-full" />
@@ -187,8 +187,8 @@ const Projects = () => {
           </div>
         </Fade>
         {/* card 3 */}
-        <Fade duration={1500} delay={800}>
-          <div className="rounded-xl overflow-hidden border border-primary/30  shadow-lg hover:-translate-y-4 transition-all duration-500">
+        <Fade duration={1000} delay={800}>
+          <div className="h-full flex flex-col rounded-xl overflow-hidden border border-primary/30  shadow-lg hover:-translate-y-4 transition-all duration-500">
             {/* Image */}
             <div className="relative">
               <img src={project3} alt={project3} className="w-full" />
