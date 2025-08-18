@@ -26,10 +26,9 @@ const Banner = () => {
               <br />
               <Typewriter
                 words={[
-                  "a Professional Developer",
                   "a Frontend Developer",
-                  "a Web App Builder",
                   "a React Developer",
+                  "a Web App Builder",
                   "a Mern Stack Developer",
                 ]}
                 cursor={true}
