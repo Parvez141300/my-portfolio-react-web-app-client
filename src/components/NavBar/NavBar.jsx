@@ -87,7 +87,7 @@ const NavBar = () => {
           <li>
             <details>
               <summary> <CgMoreVerticalO /> More</summary>
-              <ul className="text-black">
+              <ul className="text-accent">
                 <li>
                   <a
                     href="https://parvez-hossain-alif.netlify.app/assets/cv/parvez%20cv.pdf"

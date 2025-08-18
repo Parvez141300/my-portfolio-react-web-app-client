@@ -25,7 +25,7 @@ const Educations = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* diploma */}
-        <div className="bg-gradient-to-tr from-primary to-secondary p-10 rounded-3xl space-y-2 text-accent">
+        <div className="bg-gradient-to-tr from-primary to-secondary p-10 rounded-xl space-y-2 text-accent">
           <h5 className="text-xl flex items-center gap-2 font-bold">
             <FaUniversity />
             Munshiganj Polytechnic Institute
@@ -60,7 +60,7 @@ const Educations = () => {
           </span>
         </div>
         {/* SSC */}
-        <div className="bg-gradient-to-tr from-primary to-secondary p-10 rounded-3xl space-y-2 text-accent">
+        <div className="bg-gradient-to-tr from-primary to-secondary p-10 rounded-xl space-y-2 text-accent">
           <h5 className="text-xl flex items-center gap-2 font-bold">
             <FaUniversity />
             Dattapara Nabadiganta High School
