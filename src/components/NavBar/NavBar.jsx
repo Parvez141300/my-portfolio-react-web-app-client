@@ -35,6 +35,10 @@ const NavBar = () => {
     };
   }, [show]);
 
+  const toggleShow = () => {
+    setShow(!show)
+  }
+
   const handleSmoothScroll = (e, id) => {
     e.preventDefault();
     setShow(false);
@@ -46,6 +50,7 @@ const NavBar = () => {
       });
     }
   };
+  
   return (
     <div className="w-10/12 mx-auto flex justify-between items-center relative">
       {/* menu icon & logo */}
@@ -124,7 +129,7 @@ const NavBar = () => {
       <div className="flex gap-5 items-center" ref={menuRef}>
         <DarkToggleButton></DarkToggleButton>
         <button
-          onClick={() => setShow(!show)}
+          onClick={toggleShow}
           className="hidden md:block btn btn-ghost px-0"
         >
           <RiMenu3Fill size={25} />

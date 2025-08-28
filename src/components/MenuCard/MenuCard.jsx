@@ -41,7 +41,7 @@ const MenuCard = ({ className, onLinkClick }) => {
           <ul className="space-y-3">
             <li>
               <a
-                className="cursor-pointer flex items-center gap-1"
+                className="cursor-pointer flex items-center gap-1 hover:underline"
                 onClick={(e) => onLinkClick(e, "banner")}
               >
                 <FaHome />
@@ -50,7 +50,7 @@ const MenuCard = ({ className, onLinkClick }) => {
             </li>
             <li>
               <a
-                className="cursor-pointer flex items-center gap-1"
+                className="cursor-pointer flex items-center gap-1 hover:underline"
                 onClick={(e) => onLinkClick(e, "about")}
               >
                 <RiContactsFill />
@@ -59,7 +59,7 @@ const MenuCard = ({ className, onLinkClick }) => {
             </li>
             <li>
               <a
-                className="cursor-pointer flex items-center gap-1"
+                className="cursor-pointer flex items-center gap-1 hover:underline"
                 onClick={(e) => onLinkClick(e, "skills")}
               >
                 <FaUserGear />
@@ -70,7 +70,7 @@ const MenuCard = ({ className, onLinkClick }) => {
               <a
                 href="https://drive.google.com/file/d/1YVYxoqM-QVyon3WwKbDjougLbVNGMwqT/view?usp=sharing"
                 target="_blank"
-                className="flex gap-1 items-center"
+                className="flex gap-1 hover:underline items-center"
               >
                 <IoMdDownload />
                 Download CV
@@ -78,7 +78,7 @@ const MenuCard = ({ className, onLinkClick }) => {
             </li>
             <li>
               <a
-                className="cursor-pointer  flex items-center gap-1"
+                className="cursor-pointer  flex items-center gap-1 hover:underline"
                 onClick={(e) => onLinkClick(e, "educations")}
               >
                 <MdOutlineMenuBook />
@@ -87,7 +87,7 @@ const MenuCard = ({ className, onLinkClick }) => {
             </li>
             <li>
               <a
-                className="cursor-pointer flex items-center gap-1"
+                className="cursor-pointer flex items-center gap-1 hover:underline"
                 onClick={(e) => onLinkClick(e, "projects")}
               >
                 <GrProjects />
@@ -96,7 +96,7 @@ const MenuCard = ({ className, onLinkClick }) => {
             </li>
             <li>
               <a
-                className="cursor-pointer  flex items-center gap-1"
+                className="cursor-pointer  flex items-center gap-1 hover:underline"
                 onClick={(e) => onLinkClick(e, "contact")}
               >
                 <RiContactsBook3Fill />
