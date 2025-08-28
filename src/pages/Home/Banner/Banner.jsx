@@ -52,11 +52,11 @@ const Banner = () => {
                 ease: "linear",
               }}
               className="btn btn-outline btn-secondary rounded-lg"
-              href="https://parvez-hossain-alif.netlify.app/assets/cv/parvez%20cv.pdf"
+              href="https://drive.google.com/file/d/1lNPuIHWjlT4pyw17ShbEjRAmxUhJXUfM/view?usp=sharing"
               target="_blank"
             >
               <IoMdDownload size={25} />
-              Download CV
+              Resume
             </motion.a>
 
             <SocialMediaIcons></SocialMediaIcons>

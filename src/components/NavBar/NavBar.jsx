@@ -90,7 +90,7 @@ const NavBar = () => {
               <ul className="text-accent">
                 <li>
                   <a
-                    href="https://parvez-hossain-alif.netlify.app/assets/cv/parvez%20cv.pdf"
+                    href="https://drive.google.com/file/d/1YVYxoqM-QVyon3WwKbDjougLbVNGMwqT/view?usp=sharing"
                     target="_blank"
                   >
                     <IoMdDownload />

@@ -6,11 +6,12 @@ import { FaUserGear } from "react-icons/fa6";
 import { MdOutlineMenuBook } from "react-icons/md";
 import { GrProjects } from "react-icons/gr";
 import SocialMediaIcons from "../SocialMediaIcons/SocialMediaIcons";
+import { IoMdDownload } from "react-icons/io";
 
 const MenuCard = ({ className, onLinkClick }) => {
   return (
     <div
-      className={`absolute z-20 max-w-sm  mx-auto bg-white dark:bg-base-200 shadow-xl rounded-xl overflow-hidden ${className}`}
+      className={`backdrop-blur-2xl absolute z-20 max-w-xs mx-auto bg-base-100/90 shadow-xl rounded-xl overflow-hidden ${className}`}
     >
       {/* Image */}
       <div>
@@ -24,20 +25,20 @@ const MenuCard = ({ className, onLinkClick }) => {
       {/* Content */}
       <div className="p-5 space-y-3">
         {/* Heading */}
-        <h2 className="text-lg font-bold">
+        {/* <h2 className="text-lg font-bold">
           What I do to design and develop a website?
-        </h2>
+        </h2> */}
 
         {/* Description */}
-        <p className="text-sm text-primary leading-relaxed">
+        {/* <p className="text-sm text-primary leading-relaxed">
           Passionate Frontend and Mern-stack developer creating innovative web
           solutions. Specialized in modern technologies and responsive design.
-        </p>
+        </p> */}
 
         {/* Quick Links */}
-        <div className="space-y-4 md:hidden">
+        <div className="space-y-4">
           <p className="font-bold">Quick Links</p>
-          <ul className="space-y-1">
+          <ul className="space-y-3">
             <li>
               <a
                 className="cursor-pointer flex items-center gap-1"
@@ -63,6 +64,16 @@ const MenuCard = ({ className, onLinkClick }) => {
               >
                 <FaUserGear />
                 Skills
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://drive.google.com/file/d/1YVYxoqM-QVyon3WwKbDjougLbVNGMwqT/view?usp=sharing"
+                target="_blank"
+                className="flex gap-1 items-center"
+              >
+                <IoMdDownload />
+                Download CV
               </a>
             </li>
             <li>
