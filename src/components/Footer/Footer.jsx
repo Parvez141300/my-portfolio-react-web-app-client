@@ -40,7 +40,7 @@ const Footer = () => {
           {/* Quick Links */}
           <div className="space-y-4">
             <p className="font-bold">Quick Links</p>
-            <ul className="space-y-1">
+            <ul className="space-y-3">
               <li>
                 <a
                   className="cursor-pointer flex items-center gap-1"
