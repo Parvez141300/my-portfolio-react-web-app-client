@@ -35,9 +35,9 @@ const NavBar = () => {
     };
   }, [show]);
 
-  const toggleShow = () => {
-    setShow(!show)
-  }
+  const toggleMenu = () => {
+    setShow(!show);
+  };
 
   const handleSmoothScroll = (e, id) => {
     e.preventDefault();
@@ -50,7 +50,7 @@ const NavBar = () => {
       });
     }
   };
-  
+
   return (
     <div className="w-10/12 mx-auto flex justify-between items-center relative">
       {/* menu icon & logo */}
@@ -91,7 +91,10 @@ const NavBar = () => {
           </li>
           <li>
             <details>
-              <summary> <CgMoreVerticalO /> More</summary>
+              <summary>
+                {" "}
+                <CgMoreVerticalO /> More
+              </summary>
               <ul className="text-accent">
                 <li>
                   <a
@@ -129,17 +132,17 @@ const NavBar = () => {
       <div className="flex gap-5 items-center" ref={menuRef}>
         <DarkToggleButton></DarkToggleButton>
         <button
-          onClick={toggleShow}
+          onClick={toggleMenu}
           className="hidden md:block btn btn-ghost px-0"
         >
           <RiMenu3Fill size={25} />
         </button>
-        {show && (
-          <MenuCard
-            className="mt-[450px] h-[400px] overflow-y-auto -left-7 md:h-[400px] md:mt-[460px] md:left-auto md:right-0"
-            onLinkClick={handleSmoothScroll}
-          ></MenuCard>
-        )}
+        <MenuCard
+          className="-left-8 md:left-auto md:right-0 top-full mt-2 w-80"
+          onLinkClick={handleSmoothScroll}
+          isOpen={show}
+          setShow={setShow}
+        ></MenuCard>
       </div>
     </div>
   );

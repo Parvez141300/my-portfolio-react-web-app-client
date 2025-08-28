@@ -10,18 +10,26 @@
 @plugin "daisyui/theme" {
     name: "light";
     default: true;
-    --color-primary: #0891B2;      /* A deeper, more trustworthy teal */
-    --color-secondary: #0EA5E9;    /* A clear, professional sky blue */
-    --color-accent: #1E293B;       /* A very dark blue-gray (almost black) */
-    --color-base-100: #F8FAFC;     /* A very light, cool off-white */
+    --color-primary: #0891B2;
+    /* A deeper, more trustworthy teal */
+    --color-secondary: #0EA5E9;
+    /* A clear, professional sky blue */
+    --color-accent: #1E293B;
+    /* A very dark blue-gray (almost black) */
+    --color-base-100: #F8FAFC;
+    /* A very light, cool off-white */
 }
 
 @plugin "daisyui/theme" {
     name: "night";
-    --color-primary: #06B6D4;      /* A slightly brighter cyan for better contrast on dark */
-    --color-secondary: #38BDF8;    /* A bright, accessible blue for dark mode */
-    --color-accent: #F1F5F9;       /* A light gray for text/accents on dark bg */
-    --color-base-100: #0F172A;     /* Your excellent original dark blue base */
+    --color-primary: #06B6D4;
+    /* A slightly brighter cyan for better contrast on dark */
+    --color-secondary: #38BDF8;
+    /* A bright, accessible blue for dark mode */
+    --color-accent: #F1F5F9;
+    /* A light gray for text/accents on dark bg */
+    --color-base-100: #0F172A;
+    /* Your excellent original dark blue base */
 }
 
 :root {

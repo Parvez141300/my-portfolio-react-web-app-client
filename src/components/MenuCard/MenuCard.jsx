@@ -6,20 +6,30 @@ import { FaUserGear } from "react-icons/fa6";
 import { MdOutlineMenuBook } from "react-icons/md";
 import { GrProjects } from "react-icons/gr";
 import SocialMediaIcons from "../SocialMediaIcons/SocialMediaIcons";
-import { IoMdDownload } from "react-icons/io";
+import { IoMdCloseCircleOutline, IoMdDownload } from "react-icons/io";
 
-const MenuCard = ({ className, onLinkClick }) => {
+const MenuCard = ({ className = "", onLinkClick, isOpen = false, setShow }) => {
   return (
     <div
-      className={`backdrop-blur-2xl absolute z-20 max-w-xs mx-auto bg-base-100/90 shadow-xl rounded-xl overflow-hidden ${className}`}
+      className={`absolute z-20 max-w-xs mx-auto shadow-xl rounded-xl ${className} transition-all duration-500 transform origin-top bg-primary/90 ${
+        isOpen
+          ? "max-h-[400px] overflow-auto opacity-100"
+          : "max-h-0 overflow-auto opacity-0"
+      }`}
     >
       {/* Image */}
-      <div>
+      <div className="relative">
         <img
           src={popupImage}
           alt={popupImage}
           className="w-full h-24 object-cover"
         />
+        <button
+          className="absolute right-2 top-2 text-secondary cursor-pointer"
+          onClick={() => setShow(false)}
+        >
+          <IoMdCloseCircleOutline size={20} />
+        </button>
       </div>
 
       {/* Content */}
@@ -68,12 +78,22 @@ const MenuCard = ({ className, onLinkClick }) => {
             </li>
             <li>
               <a
+                href="https://drive.google.com/file/d/1lNPuIHWjlT4pyw17ShbEjRAmxUhJXUfM/view?usp=sharing"
+                target="_blank"
+                className="flex gap-1 hover:underline items-center"
+              >
+                <IoMdDownload />
+                Resume
+              </a>
+            </li>
+            <li>
+              <a
                 href="https://drive.google.com/file/d/1YVYxoqM-QVyon3WwKbDjougLbVNGMwqT/view?usp=sharing"
                 target="_blank"
                 className="flex gap-1 hover:underline items-center"
               >
                 <IoMdDownload />
-                Download CV
+                CV
               </a>
             </li>
             <li>
