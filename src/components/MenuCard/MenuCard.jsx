@@ -11,7 +11,7 @@ import { IoMdCloseCircleOutline, IoMdDownload } from "react-icons/io";
 const MenuCard = ({ className = "", onLinkClick, isOpen = false, setShow }) => {
   return (
     <div
-      className={`absolute z-20 max-w-xs mx-auto shadow-xl rounded-xl ${className} transition-all duration-500 transform origin-top bg-primary/90 ${
+      className={`absolute z-20 max-w-xs mx-auto shadow-xl rounded-xl ${className} transition-all duration-500 transform origin-top bg-base-100/80 ${
         isOpen
           ? "max-h-[400px] overflow-auto opacity-100"
           : "max-h-0 overflow-auto opacity-0"
