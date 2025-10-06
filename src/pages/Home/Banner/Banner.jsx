@@ -1,7 +1,7 @@
 import React from "react";
 import { Typewriter } from "react-simple-typewriter";
 import bannerRingImage from "../../../assets/banner-images/banner html, css, js, mongodb, express, react, node logo design.png";
-import bannerFormalImage from "../../../assets/banner-images/banner coat formal dress.png";
+import bannerFormalImage from "../../../assets/banner-images/my coat formal suit 1.png";
 import { motion, scale } from "motion/react";
 import { IoMdDownload } from "react-icons/io";
 import SocialMediaIcons from "../../../components/SocialMediaIcons/SocialMediaIcons";
@@ -71,12 +71,12 @@ const Banner = () => {
             }}
             className="w-4/6 md:w-5/6 absolute -z-10 transform translate-x-16 md:translate-x-12"
             src={bannerRingImage}
-            alt={bannerRingImage}
+            alt={'bannerRingImage'}
           />
           <img
             className="w-5/6 flex m-auto"
             src={bannerFormalImage}
-            alt={bannerFormalImage}
+            alt={'bannerFormalImage'}
           />
         </div>
       </div>
