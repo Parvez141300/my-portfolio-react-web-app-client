@@ -1,11 +1,11 @@
 import React from "react";
 import { RiContactsFill } from "react-icons/ri";
-import formalPhoto from "../../../assets/formal-photo/coat formal passport size photo.png";
 import { IoBookSharp, IoGameController } from "react-icons/io5";
 import { FaMusic } from "react-icons/fa";
 import { FaEarthAmericas } from "react-icons/fa6";
 import { BiSolidCameraMovie } from "react-icons/bi";
 import { Fade, Zoom } from "react-awesome-reveal";
+import formalPhoto from "../../../assets/formal-photo/my passport pic transparent bg.png";
 
 const About = () => {
   return (
@@ -27,7 +27,7 @@ const About = () => {
             <img
               className="w-full rounded-b-2xl"
               src={formalPhoto}
-              alt={formalPhoto}
+              alt={'formalPhoto'}
             />
           </div>
         </Zoom>
