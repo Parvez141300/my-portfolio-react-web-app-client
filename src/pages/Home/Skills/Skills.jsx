@@ -133,6 +133,98 @@ const Skills = () => {
       color: "#FFCD00",
     },
   ];
+  // back end skills
+  const backEndSkills = [
+    {
+      id: 13,
+      skill: "Node.js",
+      icon: <FaNodeJs size={20} />,
+      percentage: 60,
+      color: "#68A063",
+    },
+    {
+      id: 14,
+      skill: "Express.js",
+      icon: <SiExpress size={20} />,
+      percentage: 70,
+      color: "#000000",
+    },
+    {
+      id: 15,
+      skill: "API",
+      icon: <AiTwotoneApi size={20} />,
+      percentage: 80,
+      color: "#FF6B00",
+    },
+  ];
+  // database skills
+  const databaseSkills = [
+    {
+      id: 16,
+      skill: "MongoDB",
+      icon: <SiMongodb size={20} />,
+      percentage: 80,
+      color: "#4DB33D",
+    },
+  ];
+  // authentication skills
+  const authenticationSkills = [
+    {
+      id: 17,
+      skill: "Firebase",
+      icon: <SiFirebase size={20} />,
+      percentage: 75,
+      color: "#FFCA28",
+    },
+  ];
+  // tool skills
+  const toolSkills = [
+    {
+      id: 18,
+      skill: "Github",
+      icon: <FaGithub size={20} />,
+      percentage: 50,
+      color: "#181717",
+    },
+    {
+      id: 19,
+      skill: "VS Code",
+      icon: <VscVscode size={20} />,
+      percentage: 70,
+      color: "#007ACC",
+    },
+  ];
+  // additional skills
+  const additionalSkills = [
+    {
+      id: 20,
+      skill: "Wordpress",
+      icon: <FaWordpress size={20} />,
+      percentage: 90,
+      color: "#21759B",
+    },
+    {
+      id: 21,
+      skill: "Elementor",
+      icon: <FaElementor size={20} />,
+      percentage: 95,
+      color: "#80B0E0",
+    },
+    {
+      id: 22,
+      skill: "Photoshop",
+      icon: <SiAdobephotoshop size={20} />,
+      percentage: 65,
+      color: "#31A8FF",
+    },
+    {
+      id: 23,
+      skill: "Illustrator",
+      icon: <SiAdobeillustrator size={20} />,
+      percentage: 75,
+      color: "#FF9A00",
+    },
+  ];
 
   return (
     <div
@@ -241,7 +333,7 @@ const Skills = () => {
                 </div>
                 <span className="text-xl font-bold">Web app design</span>
               </div>
-              {designSkills.map(({id, skill, icon, percentage, color}) => (
+              {designSkills.map(({ id, skill, icon, percentage, color }) => (
                 <div className="space-y-2">
                   <div className="flex justify-between items-center">
                     <div className="flex items-center gap-2">
@@ -286,90 +378,35 @@ const Skills = () => {
                 <span className="text-xl font-bold">Back Development</span>
               </div>
 
-              {/* progress bar card Node.js 60% */}
-              <div className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center gap-2">
-                    <FaNodeJs size={20} />
-                    Node.js
+              {backEndSkills.map(({ id, skill, icon, percentage, color }) => (
+                <div key={id} className="space-y-2">
+                  <div className="flex justify-between items-center">
+                    <div className="flex items-center gap-2">
+                      {icon}
+                      {skill}
+                    </div>
+                    <p>
+                      <CountUp
+                        start={0}
+                        end={percentage}
+                        duration={5}
+                        enableScrollSpy={true}
+                      />
+                      %
+                    </p>
                   </div>
-                  <p>
-                    <CountUp
-                      start={0}
-                      end={60}
-                      duration={5}
-                      enableScrollSpy={true}
-                    />
-                    %
-                  </p>
+                  {/* progress bar */}
+                  <ProgressBar
+                    completed={percentage}
+                    bgColor={color}
+                    labelColor="#ffffff"
+                    animateOnRender
+                    maxCompleted={100}
+                    transitionDuration="4s"
+                    transitionTimingFunction="ease-in-out"
+                  />
                 </div>
-                {/* progress bar */}
-                <ProgressBar
-                  completed={60}
-                  bgColor="#8ac5f4"
-                  labelColor="#ffffff"
-                  animateOnRender
-                  maxCompleted={100}
-                  transitionDuration="4s"
-                  transitionTimingFunction="ease-in-out"
-                />
-              </div>
-              {/* progress bar card express 70% */}
-              <div className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center gap-2">
-                    <SiExpress size={20} />
-                    Express.js
-                  </div>
-                  <p>
-                    <CountUp
-                      start={0}
-                      end={70}
-                      duration={5}
-                      enableScrollSpy={true}
-                    />
-                    %
-                  </p>
-                </div>
-                {/* progress bar */}
-                <ProgressBar
-                  completed={70}
-                  bgColor="#8ac5f4"
-                  labelColor="#ffffff"
-                  animateOnRender
-                  maxCompleted={100}
-                  transitionDuration="4s"
-                  transitionTimingFunction="ease-in-out"
-                />
-              </div>
-              {/* progress bar card api 80% */}
-              <div className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center gap-2">
-                    <AiTwotoneApi size={20} />
-                    API
-                  </div>
-                  <p>
-                    <CountUp
-                      start={0}
-                      end={80}
-                      duration={5}
-                      enableScrollSpy={true}
-                    />
-                    %
-                  </p>
-                </div>
-                {/* progress bar */}
-                <ProgressBar
-                  completed={80}
-                  bgColor="#8ac5f4"
-                  labelColor="#ffffff"
-                  animateOnRender
-                  maxCompleted={100}
-                  transitionDuration="4s"
-                  transitionTimingFunction="ease-in-out"
-                />
-              </div>
+              ))}
             </div>
             {/* database */}
             <div className="space-y-5">
@@ -380,34 +417,35 @@ const Skills = () => {
                 <span className="text-xl font-bold">Database & storage</span>
               </div>
 
-              {/* progress bar card MongoDB 80% */}
-              <div className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center gap-2">
-                    <SiMongodb size={20} />
-                    MongoDB
+              {databaseSkills.map(({ id, icon, skill, percentage, color }) => (
+                <div key={id} className="space-y-2">
+                  <div className="flex justify-between items-center">
+                    <div className="flex items-center gap-2">
+                      {icon}
+                      {skill}
+                    </div>
+                    <p>
+                      <CountUp
+                        start={0}
+                        end={percentage}
+                        duration={5}
+                        enableScrollSpy={true}
+                      />
+                      %
+                    </p>
                   </div>
-                  <p>
-                    <CountUp
-                      start={0}
-                      end={80}
-                      duration={5}
-                      enableScrollSpy={true}
-                    />
-                    %
-                  </p>
+                  {/* progress bar */}
+                  <ProgressBar
+                    completed={percentage}
+                    bgColor={color}
+                    labelColor="#ffffff"
+                    animateOnRender
+                    maxCompleted={100}
+                    transitionDuration="4s"
+                    transitionTimingFunction="ease-in-out"
+                  />
                 </div>
-                {/* progress bar */}
-                <ProgressBar
-                  completed={80}
-                  bgColor="#8ac5f4"
-                  labelColor="#ffffff"
-                  animateOnRender
-                  maxCompleted={100}
-                  transitionDuration="4s"
-                  transitionTimingFunction="ease-in-out"
-                />
-              </div>
+              ))}
             </div>
             {/* authentication */}
             <div className="space-y-5">
@@ -418,34 +456,37 @@ const Skills = () => {
                 <span className="text-xl font-bold">Authentication</span>
               </div>
 
-              {/* progress bar card firebase 75% */}
-              <div className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center gap-2">
-                    <SiFirebase size={20} />
-                    Firebase
-                  </div>
-                  <p>
-                    <CountUp
-                      start={0}
-                      end={75}
-                      duration={5}
-                      enableScrollSpy={true}
+              {authenticationSkills.map(
+                ({ id, icon, skill, percentage, color }) => (
+                  <div key={id} className="space-y-2">
+                    <div className="flex justify-between items-center">
+                      <div className="flex items-center gap-2">
+                        {icon}
+                        {skill}
+                      </div>
+                      <p>
+                        <CountUp
+                          start={0}
+                          end={percentage}
+                          duration={5}
+                          enableScrollSpy={true}
+                        />
+                        %
+                      </p>
+                    </div>
+                    {/* progress bar */}
+                    <ProgressBar
+                      completed={percentage}
+                      bgColor={color}
+                      labelColor="#ffffff"
+                      animateOnRender
+                      maxCompleted={100}
+                      transitionDuration="4s"
+                      transitionTimingFunction="ease-in-out"
                     />
-                    %
-                  </p>
-                </div>
-                {/* progress bar */}
-                <ProgressBar
-                  completed={75}
-                  bgColor="#8ac5f4"
-                  labelColor="#ffffff"
-                  animateOnRender
-                  maxCompleted={100}
-                  transitionDuration="4s"
-                  transitionTimingFunction="ease-in-out"
-                />
-              </div>
+                  </div>
+                )
+              )}
             </div>
             {/* tools */}
             <div className="space-y-5">
@@ -456,62 +497,35 @@ const Skills = () => {
                 <span className="text-xl font-bold">Tools</span>
               </div>
 
-              {/* progress bar card github 50% */}
-              <div className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center gap-2">
-                    <FaGithub size={20} />
-                    Github
+              {toolSkills.map(({ id, icon, skill, percentage, color }) => (
+                <div key={id} className="space-y-2">
+                  <div className="flex justify-between items-center">
+                    <div className="flex items-center gap-2">
+                      {icon}
+                      {skill}
+                    </div>
+                    <p>
+                      <CountUp
+                        start={0}
+                        end={percentage}
+                        duration={5}
+                        enableScrollSpy={true}
+                      />
+                      %
+                    </p>
                   </div>
-                  <p>
-                    <CountUp
-                      start={0}
-                      end={50}
-                      duration={5}
-                      enableScrollSpy={true}
-                    />
-                    %
-                  </p>
+                  {/* progress bar */}
+                  <ProgressBar
+                    completed={percentage}
+                    bgColor={color}
+                    labelColor="#ffffff"
+                    animateOnRender
+                    maxCompleted={100}
+                    transitionDuration="4s"
+                    transitionTimingFunction="ease-in-out"
+                  />
                 </div>
-                {/* progress bar */}
-                <ProgressBar
-                  completed={50}
-                  bgColor="#8ac5f4"
-                  labelColor="#ffffff"
-                  animateOnRender
-                  maxCompleted={100}
-                  transitionDuration="4s"
-                  transitionTimingFunction="ease-in-out"
-                />
-              </div>
-              {/* progress bar card vs code 50% */}
-              <div className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center gap-2">
-                    <VscVscode size={20} />
-                    VS Code
-                  </div>
-                  <p>
-                    <CountUp
-                      start={0}
-                      end={70}
-                      duration={5}
-                      enableScrollSpy={true}
-                    />
-                    %
-                  </p>
-                </div>
-                {/* progress bar */}
-                <ProgressBar
-                  completed={70}
-                  bgColor="#8ac5f4"
-                  labelColor="#ffffff"
-                  animateOnRender
-                  maxCompleted={100}
-                  transitionDuration="4s"
-                  transitionTimingFunction="ease-in-out"
-                />
-              </div>
+              ))}
             </div>
             {/* Additional skill */}
             <div className="space-y-5">
@@ -522,118 +536,37 @@ const Skills = () => {
                 <span className="text-xl font-bold">Additional Skills</span>
               </div>
 
-              {/* progress bar card wordpress 90% */}
-              <div className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center gap-2">
-                    <FaWordpress size={20} />
-                    Wordpress
-                  </div>
-                  <p>
-                    <CountUp
-                      start={0}
-                      end={90}
-                      duration={5}
-                      enableScrollSpy={true}
+              {additionalSkills.map(
+                ({ id, icon, skill, percentage, color }) => (
+                  <div key={id} className="space-y-2">
+                    <div className="flex justify-between items-center">
+                      <div className="flex items-center gap-2">
+                        {icon}
+                        {skill}
+                      </div>
+                      <p>
+                        <CountUp
+                          start={0}
+                          end={percentage}
+                          duration={5}
+                          enableScrollSpy={true}
+                        />
+                        %
+                      </p>
+                    </div>
+                    {/* progress bar */}
+                    <ProgressBar
+                      completed={percentage}
+                      bgColor={color}
+                      labelColor="#ffffff"
+                      animateOnRender
+                      maxCompleted={100}
+                      transitionDuration="4s"
+                      transitionTimingFunction="ease-in-out"
                     />
-                    %
-                  </p>
-                </div>
-                {/* progress bar */}
-                <ProgressBar
-                  completed={90}
-                  bgColor="#8ac5f4"
-                  labelColor="#ffffff"
-                  animateOnRender
-                  maxCompleted={100}
-                  transitionDuration="4s"
-                  transitionTimingFunction="ease-in-out"
-                />
-              </div>
-              {/* progress bar card elementor 95% */}
-              <div className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center gap-2">
-                    <FaElementor size={20} />
-                    Elementor
                   </div>
-                  <p>
-                    <CountUp
-                      start={0}
-                      end={95}
-                      duration={5}
-                      enableScrollSpy={true}
-                    />
-                    %
-                  </p>
-                </div>
-                {/* progress bar */}
-                <ProgressBar
-                  completed={95}
-                  bgColor="#8ac5f4"
-                  labelColor="#ffffff"
-                  animateOnRender
-                  maxCompleted={100}
-                  transitionDuration="4s"
-                  transitionTimingFunction="ease-in-out"
-                />
-              </div>
-              {/* progress bar card adobe photoshop 65% */}
-              <div className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center gap-2">
-                    <SiAdobephotoshop size={20} />
-                    Photoshop
-                  </div>
-                  <p>
-                    <CountUp
-                      start={0}
-                      end={65}
-                      duration={5}
-                      enableScrollSpy={true}
-                    />
-                    %
-                  </p>
-                </div>
-                {/* progress bar */}
-                <ProgressBar
-                  completed={65}
-                  bgColor="#8ac5f4"
-                  labelColor="#ffffff"
-                  animateOnRender
-                  maxCompleted={100}
-                  transitionDuration="4s"
-                  transitionTimingFunction="ease-in-out"
-                />
-              </div>
-              {/* progress bar card adobe illustrator 75% */}
-              <div className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center gap-2">
-                    <SiAdobeillustrator size={20} />
-                    Illustrator
-                  </div>
-                  <p>
-                    <CountUp
-                      start={0}
-                      end={75}
-                      duration={5}
-                      enableScrollSpy={true}
-                    />
-                    %
-                  </p>
-                </div>
-                {/* progress bar */}
-                <ProgressBar
-                  completed={75}
-                  bgColor="#8ac5f4"
-                  labelColor="#ffffff"
-                  animateOnRender
-                  maxCompleted={100}
-                  transitionDuration="4s"
-                  transitionTimingFunction="ease-in-out"
-                />
-              </div>
+                )
+              )}
             </div>
           </div>
         </Slide>
