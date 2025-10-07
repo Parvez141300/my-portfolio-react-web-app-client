@@ -116,6 +116,23 @@ const Skills = () => {
       color: "#FF5C8D",
     },
   ];
+  // design skills
+  const designSkills = [
+    {
+      id: 11,
+      skill: "Figma",
+      icon: <FaFigma size={20} />,
+      percentage: 80,
+      color: "#F24E1E",
+    },
+    {
+      id: 12,
+      skill: "Pixso",
+      icon: <SiPixlr size={20} />,
+      percentage: 75,
+      color: "#FFCD00",
+    },
+  ];
 
   return (
     <div
@@ -224,63 +241,35 @@ const Skills = () => {
                 </div>
                 <span className="text-xl font-bold">Web app design</span>
               </div>
-
-              {/* progress bar card figma 80% */}
-              <div className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center gap-2">
-                    <FaFigma size={20} />
-                    Figma
+              {designSkills.map(({id, skill, icon, percentage, color}) => (
+                <div className="space-y-2">
+                  <div className="flex justify-between items-center">
+                    <div className="flex items-center gap-2">
+                      {icon}
+                      {skill}
+                    </div>
+                    <p>
+                      <CountUp
+                        start={0}
+                        end={percentage}
+                        duration={5}
+                        enableScrollSpy={true}
+                      />
+                      %
+                    </p>
                   </div>
-                  <p>
-                    <CountUp
-                      start={0}
-                      end={80}
-                      duration={5}
-                      enableScrollSpy={true}
-                    />
-                    %
-                  </p>
+                  {/* progress bar */}
+                  <ProgressBar
+                    completed={percentage}
+                    bgColor={color}
+                    labelColor="#ffffff"
+                    animateOnRender
+                    maxCompleted={100}
+                    transitionDuration="4s"
+                    transitionTimingFunction="ease-in-out"
+                  />
                 </div>
-                {/* progress bar */}
-                <ProgressBar
-                  completed={80}
-                  bgColor="#8ac5f4"
-                  labelColor="#ffffff"
-                  animateOnRender
-                  maxCompleted={100}
-                  transitionDuration="4s"
-                  transitionTimingFunction="ease-in-out"
-                />
-              </div>
-              {/* progress bar card pixso 75% */}
-              <div className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center gap-2">
-                    <SiPixlr size={20} />
-                    Pixso
-                  </div>
-                  <p>
-                    <CountUp
-                      start={0}
-                      end={75}
-                      duration={5}
-                      enableScrollSpy={true}
-                    />
-                    %
-                  </p>
-                </div>
-                {/* progress bar */}
-                <ProgressBar
-                  completed={75}
-                  bgColor="#8ac5f4"
-                  labelColor="#ffffff"
-                  animateOnRender
-                  maxCompleted={100}
-                  transitionDuration="4s"
-                  transitionTimingFunction="ease-in-out"
-                />
-              </div>
+              ))}
             </div>
           </div>
         </Slide>
