@@ -40,6 +40,83 @@ import { VscVscode } from "react-icons/vsc";
 import { Slide } from "react-awesome-reveal";
 
 const Skills = () => {
+  // front end skills
+  const frontEndSkills = [
+    {
+      id: 1,
+      skill: "HTML",
+      icon: <FaHtml5 size={20} />,
+      percentage: 95,
+      color: "#e34f26",
+    },
+    {
+      id: 2,
+      skill: "CSS",
+      icon: <FaCss3Alt size={20} />,
+      percentage: 85,
+      color: "#264de4",
+    },
+    {
+      id: 3,
+      skill: "Tailwind",
+      icon: <RiTailwindCssFill size={20} />,
+      percentage: 95,
+      color: "#38b2ac",
+    },
+    {
+      id: 4,
+      skill: "DaisyUI",
+      icon: <SiDaisyui size={20} />,
+      percentage: 75,
+      color: "#f0abfc",
+    },
+    {
+      id: 5,
+      skill: "JavaScript",
+      icon: <SiJavascript size={20} />,
+      percentage: 70,
+      color: "#f7df1e",
+    },
+    {
+      id: 6,
+      skill: "React.js",
+      icon: <FaReact size={20} />,
+      percentage: 85,
+      color: "#61dafb",
+    },
+    {
+      id: 7,
+      skill: "Next.js",
+      icon: <RiNextjsFill size={20} />,
+      percentage: 70,
+      color: "#000000",
+    },
+  ];
+  // deployment skills
+  const deploymentSkills = [
+    {
+      id: 8,
+      skill: "Firebase",
+      icon: <SiFirebase size={20} />,
+      percentage: 80,
+      color: "#FFCA28",
+    },
+    {
+      id: 9,
+      skill: "Netlify",
+      icon: <SiNetlify size={20} />,
+      percentage: 95,
+      color: "#00C7B7",
+    },
+    {
+      id: 10,
+      skill: "Cloudinary",
+      icon: <SiCloudinary size={20} />,
+      percentage: 75,
+      color: "#FF5C8D",
+    },
+  ];
+
   return (
     <div
       id="skills"
@@ -67,202 +144,36 @@ const Skills = () => {
                 <span className="text-xl font-bold">Frontend Development</span>
               </div>
 
-              {/* progress bar card html 95% */}
-              <div className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center gap-2">
-                    <FaHtml5 size={20} />
-                    HTML
+              {/* progress bar cards */}
+              {frontEndSkills.map(({ id, skill, icon, percentage, color }) => (
+                <div key={id} className="space-y-2">
+                  <div className="flex justify-between items-center">
+                    <div className="flex items-center gap-2">
+                      {icon}
+                      {skill}
+                    </div>
+                    <p>
+                      <CountUp
+                        start={0}
+                        end={percentage}
+                        duration={5}
+                        enableScrollSpy={true}
+                      />
+                      %
+                    </p>
                   </div>
-                  <p>
-                    <CountUp
-                      start={0}
-                      end={95}
-                      duration={5}
-                      enableScrollSpy={true}
-                    />
-                    %
-                  </p>
+                  {/* progress bar */}
+                  <ProgressBar
+                    completed={percentage}
+                    bgColor={color}
+                    labelColor="#ffffff"
+                    animateOnRender
+                    maxCompleted={100}
+                    transitionDuration="4s"
+                    transitionTimingFunction="ease-in-out"
+                  />
                 </div>
-                {/* progress bar */}
-                <ProgressBar
-                  completed={95}
-                  bgColor="#8ac5f4"
-                  labelColor="#ffffff"
-                  animateOnRender
-                  maxCompleted={100}
-                  transitionDuration="4s"
-                  transitionTimingFunction="ease-in-out"
-                />
-              </div>
-              {/* progress bar card css 85% */}
-              <div className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center gap-2">
-                    <FaCss3Alt size={20} />
-                    CSS
-                  </div>
-                  <p>
-                    <CountUp
-                      start={0}
-                      end={85}
-                      duration={5}
-                      enableScrollSpy={true}
-                    />
-                    %
-                  </p>
-                </div>
-                {/* progress bar */}
-                <ProgressBar
-                  completed={85}
-                  bgColor="#8ac5f4"
-                  labelColor="#ffffff"
-                  animateOnRender
-                  maxCompleted={100}
-                  transitionDuration="4s"
-                  transitionTimingFunction="ease-in-out"
-                />
-              </div>
-              {/* progress bar card tailwind 95% */}
-              <div className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center gap-2">
-                    <RiTailwindCssFill size={20} />
-                    Tailwind
-                  </div>
-                  <p>
-                    <CountUp
-                      start={0}
-                      end={95}
-                      duration={5}
-                      enableScrollSpy={true}
-                    />
-                    %
-                  </p>
-                </div>
-                {/* progress bar */}
-                <ProgressBar
-                  completed={85}
-                  bgColor="#8ac5f4"
-                  labelColor="#ffffff"
-                  animateOnRender
-                  maxCompleted={100}
-                  transitionDuration="4s"
-                  transitionTimingFunction="ease-in-out"
-                />
-              </div>
-              {/* progress bar card daisyui 75% */}
-              <div className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center gap-2">
-                    <SiDaisyui size={20} />
-                    Daisyui
-                  </div>
-                  <p>
-                    <CountUp
-                      start={0}
-                      end={75}
-                      duration={5}
-                      enableScrollSpy={true}
-                    />
-                    %
-                  </p>
-                </div>
-                {/* progress bar */}
-                <ProgressBar
-                  completed={75}
-                  bgColor="#8ac5f4"
-                  labelColor="#ffffff"
-                  animateOnRender
-                  maxCompleted={100}
-                  transitionDuration="4s"
-                  transitionTimingFunction="ease-in-out"
-                />
-              </div>
-              {/* progress bar card js 75% */}
-              <div className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center gap-2">
-                    <SiJavascript size={20} />
-                    JavaScript
-                  </div>
-                  <p>
-                    <CountUp
-                      start={0}
-                      end={70}
-                      duration={5}
-                      enableScrollSpy={true}
-                    />
-                    %
-                  </p>
-                </div>
-                {/* progress bar */}
-                <ProgressBar
-                  completed={75}
-                  bgColor="#8ac5f4"
-                  labelColor="#ffffff"
-                  animateOnRender
-                  maxCompleted={100}
-                  transitionDuration="4s"
-                  transitionTimingFunction="ease-in-out"
-                />
-              </div>
-              {/* progress bar card React.js 85% */}
-              <div className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center gap-2">
-                    <FaReact size={20} />
-                    React.js
-                  </div>
-                  <p>
-                    <CountUp
-                      start={0}
-                      end={85}
-                      duration={5}
-                      enableScrollSpy={true}
-                    />
-                    %
-                  </p>
-                </div>
-                {/* progress bar */}
-                <ProgressBar
-                  completed={85}
-                  bgColor="#8ac5f4"
-                  labelColor="#ffffff"
-                  animateOnRender
-                  maxCompleted={100}
-                  transitionDuration="4s"
-                  transitionTimingFunction="ease-in-out"
-                />
-              </div>
-              {/* progress bar card next.js 70% */}
-              <div className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center gap-2">
-                    <RiNextjsFill size={20} />
-                    Next.js
-                  </div>
-                  <p>
-                    <CountUp
-                      start={0}
-                      end={70}
-                      duration={5}
-                      enableScrollSpy={true}
-                    />
-                    %
-                  </p>
-                </div>
-                {/* progress bar */}
-                <ProgressBar
-                  completed={70}
-                  bgColor="#8ac5f4"
-                  labelColor="#ffffff"
-                  animateOnRender
-                  maxCompleted={100}
-                  transitionDuration="4s"
-                  transitionTimingFunction="ease-in-out"
-                />
-              </div>
+              ))}
             </div>
             {/* deploy */}
             <div className="space-y-5">
@@ -273,90 +184,37 @@ const Skills = () => {
                 <span className="text-xl font-bold">Deploy and upload</span>
               </div>
 
-              {/* progress bar card firebase 80% */}
-              <div className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center gap-2">
-                    <SiFirebase size={20} />
-                    Firebase
-                  </div>
-                  <p>
-                    <CountUp
-                      start={0}
-                      end={80}
-                      duration={5}
-                      enableScrollSpy={true}
+              {deploymentSkills.map(
+                ({ id, skill, icon, percentage, color }) => (
+                  <div key={id} className="space-y-2">
+                    <div className="flex justify-between items-center">
+                      <div className="flex items-center gap-2">
+                        {icon}
+                        {skill}
+                      </div>
+                      <p>
+                        <CountUp
+                          start={0}
+                          end={percentage}
+                          duration={5}
+                          enableScrollSpy={true}
+                        />
+                        %
+                      </p>
+                    </div>
+                    {/* progress bar */}
+                    <ProgressBar
+                      completed={percentage}
+                      bgColor={color}
+                      labelColor="#ffffff"
+                      animateOnRender
+                      maxCompleted={100}
+                      transitionDuration="4s"
+                      transitionTimingFunction="ease-in-out"
                     />
-                    %
-                  </p>
-                </div>
-                {/* progress bar */}
-                <ProgressBar
-                  completed={80}
-                  bgColor="#8ac5f4"
-                  labelColor="#ffffff"
-                  animateOnRender
-                  maxCompleted={100}
-                  transitionDuration="4s"
-                  transitionTimingFunction="ease-in-out"
-                />
-              </div>
-              {/* progress bar card netlify 95% */}
-              <div className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center gap-2">
-                    <SiNetlify size={20} />
-                    Netlify
                   </div>
-                  <p>
-                    <CountUp
-                      start={0}
-                      end={95}
-                      duration={5}
-                      enableScrollSpy={true}
-                    />
-                    %
-                  </p>
-                </div>
-                {/* progress bar */}
-                <ProgressBar
-                  completed={95}
-                  bgColor="#8ac5f4"
-                  labelColor="#ffffff"
-                  animateOnRender
-                  maxCompleted={100}
-                  transitionDuration="4s"
-                  transitionTimingFunction="ease-in-out"
-                />
-              </div>
-              {/* progress bar card cloudinary 75% */}
-              <div className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center gap-2">
-                    <SiCloudinary size={20} />
-                    Cloudinary
-                  </div>
-                  <p>
-                    <CountUp
-                      start={0}
-                      end={75}
-                      duration={5}
-                      enableScrollSpy={true}
-                    />
-                    %
-                  </p>
-                </div>
-                {/* progress bar */}
-                <ProgressBar
-                  completed={75}
-                  bgColor="#8ac5f4"
-                  labelColor="#ffffff"
-                  animateOnRender
-                  maxCompleted={100}
-                  transitionDuration="4s"
-                  transitionTimingFunction="ease-in-out"
-                />
-              </div>
+                )
+              )}
             </div>
             {/* design */}
             <div className="space-y-5">
