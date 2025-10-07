@@ -53,14 +53,14 @@ const RootLayout = () => {
       {/* ts particles background end */}
 
       {/* main for route change */}
-      <main className="relative z-30 min-h-screen pt-24 space-y-14">
+      <main className="relative z-40 min-h-screen pt-24 space-y-14">
         {/* banner section */}
         <section>
           <Banner></Banner>
         </section>
 
         {/* sticky social share links */}
-        <section className="fixed  top-1/2 -translate-y-1/2 left-1  z-20 flex flex-col gap-3">
+        <section className="fixed  top-1/2 -translate-y-1/2 left-1  z-50 flex flex-col gap-3">
           <LinkedinShareButton url={shareUrl} title={title}>
             <LinkedinIcon size={40} round></LinkedinIcon>
           </LinkedinShareButton>
