@@ -21,6 +21,7 @@ import {
 } from "react-share";
 import { FaLink } from "react-icons/fa";
 import ParticleBg from "../components/Particles/ParticleBg";
+import ScrollProgressBar from "../pages/Home/ScrollProgressBar/ScrollProgressBar";
 
 const RootLayout = () => {
   const location = useLocation();
@@ -40,6 +41,8 @@ const RootLayout = () => {
 
   return (
     <div className="relative">
+      {/* scroll progress */}
+      <ScrollProgressBar></ScrollProgressBar>
       {/* nav bar start */}
       <nav className="fixed w-full z-50 backdrop-blur-lg bg-secondary/50 py-3">
         <Slide direction="down" duration={1500}>
