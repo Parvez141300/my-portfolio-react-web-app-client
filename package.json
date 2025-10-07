@@ -14,6 +14,8 @@
     "@emotion/react": "^11.14.0",
     "@ramonak/react-progress-bar": "^5.4.0",
     "@tailwindcss/vite": "^4.1.11",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.9.1",
     "daisyui": "^5.0.50",
     "motion": "^12.23.12",
     "react": "^19.1.1",

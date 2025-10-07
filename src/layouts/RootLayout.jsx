@@ -20,6 +20,7 @@ import {
   WhatsappShareButton,
 } from "react-share";
 import { FaLink } from "react-icons/fa";
+import ParticleBg from "../components/Particles/ParticleBg";
 
 const RootLayout = () => {
   const location = useLocation();
@@ -47,8 +48,12 @@ const RootLayout = () => {
       </nav>
       {/* nav bar end */}
 
+      {/* ts particles background start */}
+      <ParticleBg></ParticleBg>
+      {/* ts particles background end */}
+
       {/* main for route change */}
-      <main className="min-h-screen pt-24 space-y-14">
+      <main className="relative z-30 min-h-screen pt-24 space-y-14">
         {/* banner section */}
         <section>
           <Banner></Banner>
@@ -119,7 +124,7 @@ const RootLayout = () => {
       </main>
 
       {/* for footer section */}
-      <footer>
+      <footer className="relative z-30">
         <Footer></Footer>
       </footer>
     </div>
