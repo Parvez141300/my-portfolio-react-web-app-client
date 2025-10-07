@@ -154,7 +154,7 @@ const Contact = () => {
             <textarea
               name="message"
               required
-              className="bg-base-100 text-xs md:text-base rounded-md p-2 border-none w-full h-36"
+              className="bg-base-100 text-xs md:text-base rounded-sm p-2 border-none w-full h-36"
               placeholder="Enter Your Message"
             ></textarea>
           </div>
