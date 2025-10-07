@@ -5,8 +5,90 @@ import project1 from "../../../assets/projects-images/porject-1.png";
 import project2 from "../../../assets/projects-images/project-2.png";
 import project3 from "../../../assets/projects-images/project-3.png";
 import { Fade } from "react-awesome-reveal";
+import ProjectCard from "./Shared/PorjectCard";
 
 const Projects = () => {
+  const projects = [
+    {
+      id: 1,
+      title: "CodeStack - A online discussion web application",
+      description:
+        "A MERN-stack platform connecting learning coding technology in depth.",
+      image: project1, // import or path of project1
+      category: "Full-Stack",
+      techStack: [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Stripe",
+        "More+",
+      ],
+      features: [
+        "Role-based access for Admin, Restaurant, Charity and User",
+        "By default after creating an account the user will badge of the website would be bronze",
+        "Stripe payment integration gold user role requests",
+        "Real-time dashboard for each role with data visualizations",
+        "Admin panel for managing roles and users",
+      ],
+      links: {
+        live: "https://assignment-12-b4778.web.app/",
+        code: "https://github.com/Parvez141300/code-stack-client",
+      },
+      icons: {
+        live: <FaExternalLinkAlt />,
+        code: <FaGithub />,
+      },
+    },
+    {
+      id: 2,
+      title: "PHA course - A course web application",
+      description:
+        "A MERN-stack platform where anyone can enroll the course and learn something new.",
+      image: project2,
+      category: "Full-Stack",
+      techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "More+"],
+      features: [
+        "People can login and register",
+        "Watch all courses and enroll any courses maximum 3",
+        "People can add course in the add course page and see the course in the Manage Course there he/she had added a course",
+        "In All Courses people can actually see all the courses and there they can enroll",
+        "People can remove added course by clicking remove button",
+      ],
+      links: {
+        live: "https://assignment-11-5e369.web.app/",
+        code: "https://github.com/Parvez141300/pha-course-client",
+      },
+      icons: {
+        live: <FaExternalLinkAlt />,
+        code: <FaGithub />,
+      },
+    },
+    {
+      id: 3,
+      title: "Easy Garden - where gardening related topics are discussed",
+      description:
+        "A MERN-stack platform There are many experienced gardener who gives tips.",
+      image: project3,
+      category: "Full-Stack",
+      techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "More+"],
+      features: [
+        "In the home page there is a slider that changes and fades every 1 second in infinite loop",
+        "Dark Mode system",
+        "User can login or register in a form",
+        "In browse tips page user can see the details of the public tip",
+        "In my tips page user can edit the tip or delete tip",
+      ],
+      links: {
+        live: "https://assignment-10-banana.web.app/",
+        code: "https://github.com/Parvez141300/easy-garden-client",
+      },
+      icons: {
+        live: <FaExternalLinkAlt />,
+        code: <FaGithub />,
+      },
+    },
+  ];
   return (
     <div
       id="projects"
@@ -23,247 +105,9 @@ const Projects = () => {
 
       {/* project card container */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* card 1 */}
-        <Fade duration={1000}>
-          <div className="h-full flex flex-col rounded-xl overflow-hidden border border-primary/30  shadow-lg hover:-translate-y-4 transition-all duration-500">
-            {/* Image */}
-            <div className="relative">
-              <img src={project1} alt={project1} className="w-full h-52" />
-              <span className="absolute top-2 right-2 bg-cyan-500 text-black px-2 py-1 rounded-md text-xs font-semibold">
-                Full-Stack
-              </span>
-            </div>
-
-            {/* Content */}
-            <div className="p-5 space-y-4">
-              {/* Title */}
-              <h2 className="text-lg font-bold">
-                CodeStack - A online discussion web application
-              </h2>
-
-              {/* Description */}
-              <p className="text-sm text-gray-400">
-                A MERN-stack platform connecting learning coding technology in
-                depth.
-              </p>
-
-              {/* Tech Stack */}
-              <div className="flex flex-wrap gap-2">
-                <span className="badge badge-outline badge-secondary">
-                  React.js
-                </span>
-                <span className="badge badge-outline badge-secondary">
-                  Node.js
-                </span>
-                <span className="badge badge-outline badge-secondary">
-                  Express.js
-                </span>
-                <span className="badge badge-outline badge-secondary">
-                  MongoDB
-                </span>
-                <span className="badge badge-outline badge-secondary">
-                  Stripe
-                </span>
-                <span className="badge badge-outline badge-secondary">
-                  More+
-                </span>
-              </div>
-
-              {/* Features */}
-              <ul className="text-sm text-gray-400 space-y-1">
-                <li>
-                  🔹 Role-based access for Admin, Restaurant, Charity and User
-                </li>
-                <li>
-                  🔹 By default after creating an account the user will badge of
-                  the website would be bronze.
-                </li>
-                <li>🔹 Stripe payment integration gold user role requests</li>
-                <li>
-                  🔹 Real-time dashboard for each role with data visualizations
-                </li>
-                <li>🔹 Admin panel for managing roles and users</li>
-              </ul>
-
-              {/* Buttons */}
-              <div className="flex gap-3 pt-3">
-                <a
-                  href="https://assignment-12-b4778.web.app/"
-                  target="_blank"
-                  className="btn btn-primary btn-sm flex items-center gap-2"
-                >
-                  <FaExternalLinkAlt /> Live Demo
-                </a>
-                <a
-                  href="https://github.com/Parvez141300/code-stack-client"
-                  target="_blank"
-                  className="btn btn-sm btn-outline btn-secondary flex items-center gap-2"
-                >
-                  <FaGithub /> Code
-                </a>
-              </div>
-            </div>
-          </div>
-        </Fade>
-        {/* card 2 */}
-        <Fade duration={1000} delay={500}>
-          <div className="h-full flex flex-col rounded-xl overflow-hidden border border-primary/30  shadow-lg hover:-translate-y-4 transition-all duration-500">
-            {/* Image */}
-            <div className="relative">
-              <img src={project2} alt={project2} className="w-full" />
-              <span className="absolute top-2 right-2 bg-cyan-500 text-black px-2 py-1 rounded-md text-xs font-semibold">
-                Full-Stack
-              </span>
-            </div>
-
-            {/* Content */}
-            <div className="p-5 space-y-4">
-              {/* Title */}
-              <h2 className="text-lg font-bold">
-                PHA course - A course web application
-              </h2>
-
-              {/* Description */}
-              <p className="text-sm text-gray-400">
-                A MERN-stack platform where anyone can enroll the course and
-                learn something new.
-              </p>
-
-              {/* Tech Stack */}
-              <div className="flex flex-wrap gap-2">
-                <span className="badge badge-outline badge-secondary">
-                  React.js
-                </span>
-                <span className="badge badge-outline badge-secondary">
-                  Node.js
-                </span>
-                <span className="badge badge-outline badge-secondary">
-                  Express.js
-                </span>
-                <span className="badge badge-outline badge-secondary">
-                  MongoDB
-                </span>
-                <span className="badge badge-outline badge-secondary">
-                  More+
-                </span>
-              </div>
-
-              {/* Features */}
-              <ul className="text-sm text-gray-400 space-y-1">
-                <li>🔹 People can login and register</li>
-                <li>🔹 Watch all courses and enroll any courses maximum 3</li>
-                <li>
-                  🔹 People can add course in the add course page and see the
-                  course in the Manage Course there he/she had added a course
-                </li>
-                <li>
-                  🔹 In All Courses people can actually see all the courses and
-                  there they can enroll
-                </li>
-
-                <li>
-                  🔹 People can remove added course by clicking remove button
-                </li>
-              </ul>
-
-              {/* Buttons */}
-              <div className="flex gap-3 pt-3">
-                <a
-                  href="https://assignment-11-5e369.web.app/"
-                  target="_blank"
-                  className="btn btn-primary btn-sm flex items-center gap-2"
-                >
-                  <FaExternalLinkAlt /> Live Demo
-                </a>
-                <a
-                  href="https://github.com/Parvez141300/pha-course-client"
-                  target="_blank"
-                  className="btn btn-sm btn-outline btn-secondary flex items-center gap-2"
-                >
-                  <FaGithub /> Code
-                </a>
-              </div>
-            </div>
-          </div>
-        </Fade>
-        {/* card 3 */}
-        <Fade duration={1000} delay={800}>
-          <div className="h-full flex flex-col rounded-xl overflow-hidden border border-primary/30  shadow-lg hover:-translate-y-4 transition-all duration-500">
-            {/* Image */}
-            <div className="relative">
-              <img src={project3} alt={project3} className="w-full" />
-              <span className="absolute top-2 right-2 bg-cyan-500 text-black px-2 py-1 rounded-md text-xs font-semibold">
-                Full-Stack
-              </span>
-            </div>
-
-            {/* Content */}
-            <div className="p-5 space-y-4">
-              {/* Title */}
-              <h2 className="text-lg font-bold">
-                Easy Garden - where gardening related topics are discussed
-              </h2>
-
-              {/* Description */}
-              <p className="text-sm text-gray-400">
-                A MERN-stack platform There are many experienced gardener who
-                gives tips.
-              </p>
-
-              {/* Tech Stack */}
-              <div className="flex flex-wrap gap-2">
-                <span className="badge badge-outline badge-secondary">
-                  React.js
-                </span>
-                <span className="badge badge-outline badge-secondary">
-                  Node.js
-                </span>
-                <span className="badge badge-outline badge-secondary">
-                  Express.js
-                </span>
-                <span className="badge badge-outline badge-secondary">
-                  MongoDB
-                </span>
-                <span className="badge badge-outline badge-secondary">
-                  More+
-                </span>
-              </div>
-
-              {/* Features */}
-              <ul className="text-sm text-gray-400 space-y-1">
-                <li>
-                  🔹 In the home page there is a slider that changes and fades
-                  every 1 second in infinite loop.
-                </li>
-                <li>🔹 Dark Mode system</li>
-                <li>🔹 User can login or register in a form.</li>
-                <li>
-                  🔹 In browse tips page user can see the details of the public
-                  tip
-                </li>
-                <li>🔹 In my tips page user can edit the tip or delete tip</li>
-              </ul>
-
-              {/* Buttons */}
-              <div className="flex gap-3 pt-3">
-                <a
-                  href="https://assignment-10-banana.web.app/"
-                  target="_blank"
-                  className="btn btn-primary btn-sm flex items-center gap-2"
-                >
-                  <FaExternalLinkAlt /> Live Demo
-                </a>
-                <a
-                  href="https://github.com/Parvez141300/easy-garden-client"
-                  target="_blank"
-                  className="btn btn-sm btn-outline btn-secondary flex items-center gap-2"
-                >
-                  <FaGithub /> Code
-                </a>
-              </div>
-            </div>
-          </div>
-        </Fade>
+        {projects.map((project) => (
+          <ProjectCard key={project.id} project={project} />
+        ))}
       </div>
     </div>
   );
