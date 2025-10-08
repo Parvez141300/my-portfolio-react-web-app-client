@@ -5,13 +5,13 @@ import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 const ProjectCard = ({ project, setShowModal, handlePopup }) => {
   return (
     <Fade duration={1000}>
-      <div className="h-full flex flex-col rounded-xl overflow-hidden border border-primary/30  shadow-lg hover:-translate-y-4 transition-all duration-500">
+      <div className="h-full flex flex-col rounded-xl overflow-hidden border border-primary/30  shadow-lg group hover:-translate-y-4 transition-all duration-500">
         {/* Image */}
         <div className="relative">
           <img
             src={project?.image}
             alt={project?.title}
-            className="w-full h-52"
+            className="w-full h-52 object-cover transition-all duration-500 group-hover:brightness-50"
           />
           <span className="absolute top-2 right-2 bg-cyan-500 text-black px-2 py-1 rounded-md text-xs font-semibold">
             {project?.category}
@@ -22,9 +22,6 @@ const ProjectCard = ({ project, setShowModal, handlePopup }) => {
         <div className="p-5 space-y-4">
           {/* Title */}
           <h2 className="text-lg font-bold">{project?.title}</h2>
-
-          {/* Description */}
-          <p className="text-sm text-gray-400">{project.description}</p>
 
           {/* Tech Stack */}
           <div className="flex flex-wrap gap-2">
