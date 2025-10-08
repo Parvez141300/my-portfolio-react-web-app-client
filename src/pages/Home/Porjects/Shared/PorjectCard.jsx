@@ -2,7 +2,7 @@ import React from "react";
 import { Fade } from "react-awesome-reveal";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, setShowModal, handlePopup }) => {
   return (
     <Fade duration={1000}>
       <div className="h-full flex flex-col rounded-xl overflow-hidden border border-primary/30  shadow-lg hover:-translate-y-4 transition-all duration-500">
@@ -35,14 +35,16 @@ const ProjectCard = ({ project }) => {
             ))}
           </div>
 
-          {/* Features */}
-          <ul className="text-sm text-gray-400 space-y-1">
-            {project.features.map((feature, index) => (
-              <li key={index}>
-                🔹 {feature}
-              </li>
-            ))}
-          </ul>
+          {/* see more button to open modal */}
+          <button
+            onClick={() => {
+              handlePopup(project.id);
+              document.getElementById("my_modal_3").showModal();
+            }}
+            className="hover:underline cursor-pointer"
+          >
+            See More...
+          </button>
 
           {/* Buttons */}
           <div className="flex gap-3 pt-3">

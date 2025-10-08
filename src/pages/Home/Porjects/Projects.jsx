@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { GrProjects } from "react-icons/gr";
 import project1 from "../../../assets/projects-images/porject-1.png";
@@ -6,11 +6,15 @@ import project2 from "../../../assets/projects-images/project-2.png";
 import project3 from "../../../assets/projects-images/project-3.png";
 import { Fade } from "react-awesome-reveal";
 import ProjectCard from "./Shared/PorjectCard";
+import ModalCard from "./Shared/ModalCard";
 
 const Projects = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [modalContent, setModalContent] = useState({});
+  console.log("modal content", modalContent);
   const projects = [
     {
-      id: 1,
+      id: "project-1",
       title: "CodeStack - A online discussion web application",
       description:
         "A MERN-stack platform connecting learning coding technology in depth.",
@@ -41,7 +45,7 @@ const Projects = () => {
       },
     },
     {
-      id: 2,
+      id: "project-2",
       title: "PHA course - A course web application",
       description:
         "A MERN-stack platform where anyone can enroll the course and learn something new.",
@@ -65,7 +69,7 @@ const Projects = () => {
       },
     },
     {
-      id: 3,
+      id: "project-3",
       title: "Easy Garden - where gardening related topics are discussed",
       description:
         "A MERN-stack platform There are many experienced gardener who gives tips.",
@@ -89,11 +93,14 @@ const Projects = () => {
       },
     },
   ];
+  const handlePopup = (id) => {
+    console.log("popup id:", id);
+    const matchedProject = projects.find((p) => p.id === id);
+    setShowModal((prv) => !prv);
+    setModalContent(matchedProject);
+  };
   return (
-    <div
-      id="projects"
-      className="max-w-10/12 mx-auto space-y-8 md:space-y-12 min-h-[100vh-73px]"
-    >
+    <div className="max-w-10/12 mx-auto space-y-8 md:space-y-12 min-h-[100vh-73px]">
       <div className="flex justify-center items-center gap-2">
         <span className="text-secondary">
           <GrProjects size={20} />
@@ -104,11 +111,29 @@ const Projects = () => {
       </div>
 
       {/* project card container */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 relative">
         {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+          <ProjectCard
+            key={project.id}
+            project={project}
+            setShowModal={setShowModal}
+            handlePopup={handlePopup}
+          />
         ))}
       </div>
+      {/* popup model element */}
+      <dialog id="my_modal_3" className="modal">
+        <div className="modal-box">
+          <form method="dialog">
+            {/* if there is a button in form, it will close the modal */}
+            <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+              ✕
+            </button>
+          </form>
+
+          <ModalCard modalContent={modalContent}></ModalCard>
+        </div>
+      </dialog>
     </div>
   );
 };
