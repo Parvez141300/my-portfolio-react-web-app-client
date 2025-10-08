@@ -116,7 +116,6 @@ const Projects = () => {
           <ProjectCard
             key={project.id}
             project={project}
-            setShowModal={setShowModal}
             handlePopup={handlePopup}
           />
         ))}
@@ -131,7 +130,9 @@ const Projects = () => {
             </button>
           </form>
 
-          <ModalCard modalContent={modalContent}></ModalCard>
+          <div className="mt-4 md:mt-0 max-h-96">
+            <ModalCard modalContent={modalContent}></ModalCard>
+          </div>
         </div>
       </dialog>
     </div>

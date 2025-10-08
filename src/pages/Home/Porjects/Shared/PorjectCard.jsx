@@ -2,7 +2,7 @@ import React from "react";
 import { Fade } from "react-awesome-reveal";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
-const ProjectCard = ({ project, setShowModal, handlePopup }) => {
+const ProjectCard = ({ project, handlePopup }) => {
   return (
     <Fade duration={1000}>
       <div className="h-full flex flex-col rounded-xl overflow-hidden border border-primary/30  shadow-lg group hover:-translate-y-4 transition-all duration-500">
