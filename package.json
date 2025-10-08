@@ -18,6 +18,7 @@
     "@tsparticles/slim": "^3.9.1",
     "daisyui": "^5.0.50",
     "motion": "^12.23.12",
+    "prop-types": "^15.8.1",
     "react": "^19.1.1",
     "react-awesome-reveal": "^4.3.1",
     "react-countup": "^6.5.3",
@@ -27,6 +28,7 @@
     "react-share": "^5.2.2",
     "react-simple-typewriter": "^5.0.1",
     "react-tilty": "^3.0.0",
+    "react-vertical-timeline-component": "^3.5.3",
     "sweetalert2": "^11.22.3",
     "tailwindcss": "^4.1.11"
   },

@@ -7,6 +7,11 @@ import {
 } from "react-icons/fa";
 import { MdGrade, MdOutlineMenuBook } from "react-icons/md";
 import { SlCalender } from "react-icons/sl";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
 
 const Educations = () => {
   const educations = [
@@ -57,41 +62,56 @@ const Educations = () => {
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <VerticalTimeline className="!m-0">
         {educations.map((education) => (
-          <div key={education.id} className="bg-gradient-to-tr from-primary to-secondary p-10 rounded-xl space-y-2 text-accent">
-            <h5 className="text-xl flex items-center gap-2 font-bold">
-              <FaUniversity />
-              {education?.institute}
-            </h5>
-            <h3 className="text-sm flex items-center gap-2">
-              <FaUserGraduate size={20} /> {education?.level}
-            </h3>
-
-            <h6 className="flex items-center gap-2 mb-5 text-sm">
-              <SlCalender />
-              {education?.duration}
-            </h6>
-            <p className="text-justify">{education?.description}</p>
-            <span className="badge badge-secondary flex items-center gap-2 h-fit">
-              <FaLayerGroup /> Group: {education?.group}
-            </span>
-            <span className="badge badge-secondary flex items-center gap-2 h-fit">
-              <MdGrade />
-              GPA: {education?.gpa}
-            </span>
-            <h5 className="flex items-center gap-2 font-bold">
-              <FaAward />
-              Key Achievements
-            </h5>
-            <ul className="list-disc list-inside">
-              {education.key_achievements.map((achievement, index) => (
-                <li key={index}>{achievement}</li>
-              ))}
-            </ul>
-          </div>
+          <VerticalTimelineElement
+            key={education?.id}
+            className="vertical-timeline-element--education"
+            contentStyle={{
+              background: "var(--color-primary)", // তুমি চাইলে hex ব্যবহার করো: '#0ea5e9'
+              color: "#fff",
+              padding: "1.25rem",
+              borderRadius: "0.75rem",
+            }}
+            contentArrowStyle={{
+              borderRight: "7px solid  var(--color-primary)",
+            }}
+            date={education?.duration}
+            dateClassName="text-accent"
+            iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+            icon={<FaUserGraduate size={20} />}
+          >
+            <div className="space-y-2">
+              <h3 className="vertical-timeline-element-title text-xl flex items-center gap-2 font-bold">
+                <FaUniversity />
+                {education?.institute}
+              </h3>
+              <h4 className="vertical-timeline-element-subtitle text-sm flex items-center gap-2">
+                <FaUserGraduate size={15} /> {education?.level}
+              </h4>
+              <p className="text-justify">{education?.description}</p>
+              <div className="space-y-2 mt-2">
+                <span className="badge badge-secondary flex items-center gap-2 h-fit">
+                  <FaLayerGroup /> Group: {education?.group}
+                </span>
+                <span className="badge badge-secondary flex items-center gap-2 h-fit">
+                  <MdGrade />
+                  GPA: {education?.gpa}
+                </span>
+              </div>
+              <h5 className="flex items-center gap-2 font-bold">
+                <FaAward />
+                Key Achievements
+              </h5>
+              <ul className="list-disc list-inside">
+                {education.key_achievements.map((achievement, index) => (
+                  <li key={index}>{achievement}</li>
+                ))}
+              </ul>
+            </div>
+          </VerticalTimelineElement>
         ))}
-      </div>
+      </VerticalTimeline>
     </div>
   );
 };
